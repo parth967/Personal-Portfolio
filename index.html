@@ -1,0 +1,691 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+
+
+  <meta charset="utf-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1, shrink-to-fit=no">
+  <meta name="description" content="">
+  <meta name="author" content="">
+
+
+
+  <title>Parth Patel</title>
+
+  <!-- Bootstrap core CSS -->
+  <link href="vendor/bootstrap/css/bootstrap.min.css" rel="stylesheet">
+
+  <!-- Custom fonts for this template -->
+  <link href="https://fonts.googleapis.com/css?family=Saira+Extra+Condensed:500,700" rel="stylesheet">
+  <link href="https://fonts.googleapis.com/css?family=Muli:400,400i,800,800i" rel="stylesheet">
+  <link href="vendor/fontawesome-free/css/all.min.css" rel="stylesheet">
+
+  <!-- Custom styles for this template -->
+  <link href="css/resume.min.css" rel="stylesheet">
+  <link rel="apple-touch-icon" sizes="180x180" href="/apple-touch-icon.png">
+<link rel="icon" type="image/png" sizes="32x32" href="/favicon-32x32.png">
+<link rel="icon" type="image/png" sizes="16x16" href="/favicon-16x16.png">
+<link rel="manifest" href="/site.webmanifest">
+<link rel="mask-icon" href="/safari-pinned-tab.svg" color="#5bbad5">
+<meta name="msapplication-TileColor" content="#da532c">
+<meta name="theme-color" content="#ffffff">
+<style type="text/css">
+  ol.s {list-style-type: inherit;}
+</style>
+</head>
+<script>
+var TxtType = function (el, toRotate, period) {
+	this.toRotate = toRotate;
+	this.el = el;
+	this.loopNum = 0;
+	this.period = parseInt(period, 10) || 2000;
+	this.txt = '';
+	this.tick();
+	this.isDeleting = false;
+};
+
+TxtType.prototype.tick = function () {
+	var i = this.loopNum % this.toRotate.length;
+	var fullTxt = this.toRotate[i];
+
+	if (this.isDeleting) {
+		this.txt = fullTxt.substring(0, this.txt.length - 1);
+	} else {
+		this.txt = fullTxt.substring(0, this.txt.length + 1);
+	}
+
+	this.el.innerHTML = '<span class="wrap">' + this.txt + '</span>';
+
+	var that = this;
+	var delta = 200 - Math.random() * 100;
+
+	if (this.isDeleting) { delta /= 2; }
+
+	if (!this.isDeleting && this.txt === fullTxt) {
+		delta = this.period;
+		this.isDeleting = true;
+	} else if (this.isDeleting && this.txt === '') {
+		this.isDeleting = false;
+		this.loopNum++;
+		delta = 500;
+	}
+
+	setTimeout(function () {
+		that.tick();
+	}, delta);
+};
+
+window.onload = function () {
+	var elements = document.getElementsByClassName('typewrite');
+	for (var i = 0; i < elements.length; i++) {
+		var toRotate = elements[i].getAttribute('data-type');
+		var period = elements[i].getAttribute('data-period');
+		if (toRotate) {
+			new TxtType(elements[i], JSON.parse(toRotate), period);
+		}
+	}
+	// INJECT CSS
+	var css = document.createElement("style");
+	css.type = "text/css";
+	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+	document.body.appendChild(css);
+};
+
+window.onload = function () {
+	var elements = document.getElementsByClassName('typewrite');
+	for (var i = 0; i < elements.length; i++) {
+		var toRotate = elements[i].getAttribute('data-type');
+		var period = elements[i].getAttribute('data-period');
+		if (toRotate) {
+			new TxtType(elements[i], JSON.parse(toRotate), period);
+		}
+	}
+	// INJECT CSS
+	var css = document.createElement("style");
+	css.type = "text/css";
+	css.innerHTML = ".typewrite > .wrap { border-right: 0.08em solid #fff}";
+	document.body.appendChild(css);
+};
+</script>
+
+<body id="page-top">
+
+  <nav class="navbar navbar-expand-lg navbar-dark bg-primary fixed-top" id="sideNav">
+    <a class="navbar-brand js-scroll-trigger" href="#page-top">
+      <span class="d-block d-lg-none">Parth Patel</span>
+      <span class="d-none d-lg-block">
+       <!-- <img class="img-fluid img-profile rounded-circle mx-auto mb-2" style="width=800px" src="img/Parth_new.jpg" alt="">-->
+        <img class="img-fluid rounded-circle mx-auto mb-2" style="width=800px" src="img/circle_parth.png" alt="">
+      </span>
+
+    </a>
+    <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarSupportedContent" aria-controls="navbarSupportedContent" aria-expanded="false" aria-label="Toggle navigation">
+      <span class="navbar-toggler-icon"></span>
+    </button>
+    <div class="collapse navbar-collapse" id="navbarSupportedContent">
+
+      <ul class="navbar-nav">
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#about"><i class="fas fa-user-friends"></i>&nbsp;About me</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#experience"><i class="fas fa-school"></i>&nbsp;Education</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#skills"><i class="fas fa-code"></i>&nbsp;Skills</a>
+        </li>
+        <li class="nav-item">
+          <a class="nav-link js-scroll-trigger" href="#interests"><i class="fas fa-laptop-code"></i>&nbsp;Projects</a>
+        </li>
+      </ul>
+    </div>
+  </nav>
+
+  <div class="container-fluid p-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="about">
+<div class="fixedElement">
+        <div class="w-100">
+
+            <h1 class="mb-0">
+                Parth Patel
+                <span class="text-primary"></span>
+            </h1>
+            	<h2>
+	  				<a href="" class="typewrite" data-period="1000" data-type='["Data Analyst","Software Developer","Python Developer"]'>
+	  					<span class="wrap"></span>
+	  				</a>
+	  			</h2>
+
+            <div class="subheading mb-5">
+                 <i class="fas fa-phone-volume"></i>&nbsp;(519) 778-5965 &nbsp;&nbsp;&nbsp;&nbsp;<i class="fas fa-envelope-square"></i>&nbsp;
+                <a href="mailto:name@email.com">pparth967@gmail.com</a>
+
+            </div>
+
+              <div class="row center">
+                <div class=" colquote col-sm-6 center">
+            <div class="quote border border-dark rounded">
+            <i class="fa fa-quote-left fa-3x fa-pull-left fa-border" aria-hidden="true"></i>  "Hello folks, My name is Parth, and I live in Kitchener, Ontario; with the help of python and significant machine learning models I help companies and individuals to make their applications and website staggering."
+            </div>
+          </div>
+          <div class="col-sm-6" style="color: black;">
+             <ul>My name is Parth, and I will share what I have learned throughout my career. I have done my Bachelor of Engineering in the Information Technology field. Recently, I've done a Post-graduation in Information Technology business analysis at Conestoga College Doon Campus; and have great experience in the Computer science field. I have hands-on practice on various projects in the Computer science field during bachelors.</br></br>I have an excellent command in Data Science, Machine learning and the Internet of things field. Moreover, in my post-graduation, I have learnt a bundle of techniques to improve any business and business process by analyzing different KPIs.</br></br>
+    As per my aspect the most important thing, I have learnt during my post-graduation is business communications and insight.
+</ul>
+  </div>
+</div>
+
+
+            <div class="social-icons">
+                <a href="https://www.linkedin.com/in/parth-patel-72a92611a/">
+                    <i class="fab fa-linkedin-in"></i>
+                </a>
+                <a href="https://github.com/parth967">
+                    <i class="fab fa-github"></i>
+                </a>
+                <a href=" https://twitter.com/pparth967?s=08">
+                    <i class="fab fa-twitter"></i>
+                </a>
+                <a href="https://www.facebook.com/profile.php?id=100005820272460">
+                    <i class="fab fa-facebook-f"></i>
+                </a>
+            </div>
+        </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex justify-content-center" id="experience">
+<div class="w-100">
+      <h2 class="mb-5">Education</h2>
+      <div ="container">
+        <div class="row">
+    <div class="col-sm-5 center">
+      <div class="headingstyle border border-dark rounded center">
+      <h4 class = "mb-0" ><i class="fa fa-university" aria-hidden="true"></i>&nbsp;Conestoga College</h4>
+      <div class ="row">
+        <div class="col">
+        <h7 class="mb-0" style="padding-left:0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;Post-Graduation</h7>
+      </div>
+      <div class ="col">
+        <h7 class="mb-0" style="color:#098975">Jan 2020 - Apr 2021</h7>
+      </div>
+    </div>
+    </div>
+
+      <div class="col">
+        <div class ="row">
+          <h7 class="mb-0" style="margin:2%;"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;<u>Informtion Technology Business Analysis - Operation</u></h7>
+        </div>
+</div>
+<div class="row">
+<ul class="fa-ul mb-0">
+  <div class="row">
+  <div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Prototyping & Wireframe</div></div>
+  <div class="row"><div class="col-sm-0">
+<i class="fas fa-arrow-right"></i></div><div class="col">UML Tools</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Use Case</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Microsoft Office</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">SQL Database</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Adoption Scrum, Kanban and Agile Methodologies</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Creation Persona</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Root Cause Analysis</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Enterprise Resource Planning</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Converting Raw Data into Meaningful Information using PowerBI</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Business Process Analsyis using various Tools and Techniques</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Stake Holder Communication</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Elicitation Techniques</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">SWOT Analysis</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Metrics Analysis using Hootsuite</div></div></ul>
+</div>
+
+    </div>
+
+    <div class="col-sm-1">
+    </div>
+    <div class="col-sm-5 center">
+      <div class="headingstyle border border-dark rounded center">
+      <h4 class="mb-0"><i class="fa fa-university" aria-hidden="true"></i>&nbsp;Sardar Patel College of Engineering</h4>
+      <div class ="row">
+        <div class="col">
+        <h7 class="mb-0" style="padding-left:0%;"><i class="fa fa-graduation-cap" aria-hidden="true"></i>&nbsp;B.Engineering</h7>
+      </div>
+      <div class ="col">
+        <h7 class="mb-0" style="color:#098975">Aug 2015 - May 2019</h7>
+      </div>
+</div>
+</div>
+
+<div class="col">
+      <div class ="row">
+        <h7 class="mb-0" style="margin:2%;"><i class="fa fa-book" aria-hidden="true"></i>&nbsp;<u>Information Technology</u></h7>
+      </div>
+</div>
+<div class="row">
+<ul class="fa-ul mb-0">
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Data Structures and Algorithms</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Programming Language: C, C++, Python, Java, C#.</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Java and Advance Java (JSP / Servlet, Spring framework, Hibernates )</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Python for Data Science and Machine Learning</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Python for Web scrapping</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Python for Automation and Internet of Things</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Basic concept of IoT</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Arduino</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Database and Distributed Database</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Web Security</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Data Compression</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Django and Flask framework of Python</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Data Mining</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Website Development (HTML, html5,Javascript, css, bootstrap, Angular js, Node js)</div></div>
+<div class="row"><div class="col-sm-0"><i class="fas fa-arrow-right"></i></div><div class="col">Database Design </div></div></ul>
+</div>
+
+
+    </div>
+  </div>
+      </div>
+    </div>
+
+  <!--    <div class="w-100">
+        <h2 class="mb-5">Educational Background</h2>
+
+       <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+          <div class="resume-content">
+            <h3 class="mb-0">Conestoga College</h3>
+            <div class="subheading mb-3">Post-Graduation</div>
+            <div>Information Technology Business Analysis</div><ul class="fa-ul mb-0">
+            <p><li><i class="far fa-hand-point-right"></i> &nbsp;&nbsp;Here I improve my communication skills in a different sector. I learned how to start a conversation with  a professional person and gather business requirements. </li><li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;I gained insight into the business side and learned different business intelligence tools, which helped me to expand my knowledge.</li></ul>
+</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">January 2020 - April 2021</span>
+          </div>
+        </div>
+<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+
+            <h3 class="mb-0">Sardar Patel College of Engineering</h3>
+            <div class="subheading mb-3">Bachelor's of Engineering</div>
+            <p>CGPA : 9.45</p>
+            <div>Information Technology</div><ul class="fa-ul mb-0">
+            <p><li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;Here I participated in many technical events, where I show my coding and interpersonal skills and win in many of them. </li><li><i class="far fa-hand-point-right"></i> &nbsp;&nbsp;Apart from participating, I also conduct many events where I manage my team to run events so other students can enjoy these events.</li>
+            <li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;In my Bachelor of Engineering, I learned lots of programing language like C, C++, python, Android programing, Java, Advanced Java, .Net.</li>
+          <li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;Moreover, I learned lots of subject related to web technology like HTML, HTML5, CSS, JavaScript, web security, Database and Distributed Database.</li>
+          <li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;In addition, I gained knowledge of Data compression, and Algorithm and Data Structure</li></ul>
+</p></ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2015 - May 2019</span>
+          </div>
+        </div>
+
+<div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+
+            <h3 class="mb-0">D N High School</h3>
+            <div class="subheading mb-3">High School</div>
+            <p>Percentage: 89.3%</p>
+            <div>Science Stream</div><ul class="fa-ul mb-0">
+            <p><li><i class="far fa-hand-point-right"></i> &nbsp;&nbsp;   I passed my Secondary school education from D.N High School, Anand. School is associated with GSEB (Gujarat Secondary Education Bord). </li><li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp; I participated in many competitions like Dance, Drawing and essay writing in my secondary school, and I won some competitions there. But I think that apart from winning this competition, I learn a lot because it taught me lots of things like working in a team and overcoming stage fear.</li>
+            <li><i class="far fa-hand-point-right"></i>&nbsp;&nbsp;  In science, I learned subjects like physics, chemistry, and math as a main subject. Math is my favorite subject from my school time. I like to play with number and equation since my school time.</li>
+         </ul>
+</p></ul>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">April 2013 - May 2015</span>
+          </div>
+        </div>
+
+      </div>-->
+
+    </section>
+<hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="skills">
+      <div class="w-100">
+        <h2 class="mb-5">Skills</h2>
+
+        <div class="subheading mb-3" style="color:black;"><u>Programming Languages &amp; Tools</u></div>
+        <ul class="list-inline dev-icons">
+          <li class="list-inline-item">
+            <i class="fab fa-html5"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-css3-alt"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-js-square"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-python"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-java"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-wordpress-simple"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fab fa-php"></i>
+          </li>
+            <li class="list-inline-item">
+            <i class="fab fa-aws"></i>
+          </li>
+          <li class="list-inline-item">
+            <i class="fas fa-database"></i>
+          </li>
+        </ul>
+        <div class="container">
+<div class="skills">
+   <!-- skill -->
+   <div class="skill">
+      <!-- title -->
+      <div class="skill-title">
+         Python (Basic, Django, Machine learning, Data Science)
+      </div>
+      <!-- bar -->
+      <div class="skill-bar" data-bar="90"><span></span></div>
+   </div>
+   <!-- #skill -->
+   <!-- skill -->
+   <div class="skill">
+      <!-- title -->
+      <div class="skill-title">
+         Machine Learning
+      </div>
+      <!-- bar -->
+      <div class="skill-bar" data-bar="83"><span></span></div>
+   </div>
+   <!-- #skill -->
+   <!-- skill -->
+   <div class="skill">
+      <!-- title -->
+      <div class="skill-title">
+         Data Analysis
+      </div>
+      <!-- bar -->
+      <div class="skill-bar" data-bar="85"><span></span></div>
+   </div>
+   <!-- #skill -->
+   <!-- skill -->
+   <div class="skill">
+      <!-- title -->
+      <div class="skill-title">
+         Web Designing
+      </div>
+      <!-- bar -->
+      <div class="skill-bar" data-bar="70"><span></span></div>
+   </div>
+   <div class="skill">
+      <!-- title -->
+      <div class="skill-title">
+         Web Development
+      </div>
+      <!-- bar -->
+      <div class="skill-bar" data-bar="79"><span></span></div>
+   </div>
+    <div class="skill">
+   <div class="skill-title">
+      Java (Basic, Advance Java, Jsp/Servelt, Spring, Hibernates)
+   </div>
+   <!-- bar -->
+   <div class="skill-bar" data-bar="75"><span></span></div>
+ </div>
+</div>
+   <!-- #skill -->
+</div>
+</div>
+    </section>
+    <hr class="m-0">
+<!----
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="education">
+      <div class="w-100">
+        <h2 class="mb-5">Accomplishments</h2>
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+           Got an academic of excellence award continuous eight semesters of my Bachelor of Engineering. </li>
+          <li>
+           <i class="fa-li fa fa-trophy text-warning"></i>
+            We raised $2000 fund for cancer patient.</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+           In my neighborhood, I created and coordinated the annual "Feed the homeless" events.</li>
+          <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            In my college successfully conduct a whole technical and non-technical event on my own.</li>
+
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+           Successfully pass IELTS in my first attempt with 6.5 bands.</li>
+
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Got a remarkable achievements in Math's Olympiad 2013.</li>
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Successfully developed a College portal for all college departments and learned how to work with the various team for one project.</li>
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            I got the "Dewang Mehta IT Award" at the state level for continuous two years.</li>
+            <li>
+           <i class="fa-li fa fa-trophy text-warning"></i>
+            In addition, I gained knowledge of Data compression, and Algorithm and Data Structure.</li>
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Participated in "Gujarat Hackathon 2017," where I developed one device to track and monitor cycle in the city where people can rent a bicycle using a mobile application.</li>
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Completed project on python using Image processing technology where an individual can control Laptop using ordinary hand gestures.</li>
+            <li>
+            <i class="fa-li fa fa-trophy text-warning"></i>
+            Develop an IoT device in my final year project, which helps women track their health and provide safety.</li>
+</ul>
+
+
+       <!-- <div class="resume-item d-flex flex-column flex-md-row justify-content-between">
+          <div class="resume-content">
+            <h3 class="mb-0">James Buchanan High School</h3>
+            <div class="subheading mb-3">Technology Magnet Program</div>
+            <p>GPA: 3.56</p>
+          </div>
+          <div class="resume-date text-md-right">
+            <span class="text-primary">August 2002 - May 2006</span>
+          </div>
+        </div>
+
+      </div>
+    </section>
+
+
+    </section>-->
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="interests">
+      <div class="w-100">
+
+
+        <h2 class="mb-5">Projects</h2>
+        <div class="resume-item d-flex flex-column flex-md-row justify-content-between mb-5">
+        <div class="resume-content">
+            <h3 class="mb-0" style="margin-top: 40px">Car Purchasing Amount Prediction</h3>
+
+            <ul class="fa-ul mb-0">
+             <li>
+            <i class="fas fa-arrow-right"></i>
+            This project predicts the expected amount on which client of a car company would buy a car. Here, I've used the regression algorithm to predict purchase amount and the neural network to make my prediction and model more accurate. In this project, the model takes age, monthly salary, yearly income and credit card debt to predict. Here, the model uses the Tensorflow library for conducting a neural network.</li>
+
+            <li>
+             <b>Technology Used:</b>&nbsp; Python, Python's Pandas Framework, Scikit learn, Neural network, TensorFlow, Numpy, seaborn and matplotlib for data visualization, and regression algorithm to predict purchase amount.
+
+</li>
+           </ul>
+           <a href='https://github.com/parth967/Car-Purchase-Amount-Prediction/blob/main/Car%20Purchase%20Amount%20Prediction%20.ipynb'> Checkout on GitHub></a>
+
+
+
+            <h3 class="mb-0"  style="margin-top: 40px">Women Safety and Health Monitoring</h3>
+
+            <ul class="fa-ul mb-0">
+             <li>
+            <i class="fas fa-arrow-right"></i>
+            I have developed an IoT based device on Women Safety and Health monitoring as a Final year project.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            Also, create one android based application in which users can connect with the device via Bluetooth.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            This is a wearable device, and users can send a distress signal in a problematic situation. Here users can send signals via one-click on registered loving person mobile. Here latitude and longitude of the user send via SMS, and every 2 min registered person gets SMS via the user's updated location.</li>
+              <li><i class="fas fa-arrow-right"></i>
+              Android application helps women to track their health-related data like Heartbeat, body temperature and blood pressure. Here this data helps women to check symptoms on some dieses.</li>
+           <li><i class="fas fa-arrow-right"></i>
+             This android application is built using Java and SQL lite to store some login information and store some health history of individual users.</li>
+            <li><i class="fas fa-arrow-right"></i>
+             I developed this project within 4 months, where I create one report based on this project and build a working prototype during this period.</li>
+           </ul>
+           <a href='https://github.com/parth967/Womensafteyand-healthmonitoring'> Checkout on GitHub</a>
+
+
+
+           <h3 class="mb-0" style="margin-top: 40px">Computer Control using Hand gesture</h3>
+
+            <ul class="fa-ul mb-0">
+             <li>
+            <i class="fas fa-arrow-right"></i>
+            In my third year of bachelor’s, I have developed one python-based program which helps the user to do some essential activity on the computer using Hand gesture.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            Here user can control some basic activity like drag and drop of file and icon, zoom in and zoom out of images, next and previous slide in presentation, start and stop of presentation, play, pause and fast, forward of music.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            In this project, I used Image Processing as a technology. Here OpenCV library helps me to perform image processing operation in my project.</li>
+              <li><i class="fas fa-arrow-right"></i>
+              I used .net framework as a frontend to create desktop-based application, and this application directly points to my python script which run in background.</li>
+           <li><i class="fas fa-arrow-right"></i>
+             Here user must wear some coloring gloves, color can be anything. So, program detect this color and do some task according to user gesture.</li>
+            <li><i class="fas fa-arrow-right"></i>
+              I completed this project within 3 months and create one report and canvas based on this project.</li>
+              <li><i class="fas fa-arrow-right"></i>
+               This project is built using python programming language and use OpenCV library to perform some image processing operation.</li>
+           </ul>
+           <a href='https://github.com/parth967/HandgestureRecognition'> Checkout on GitHub</a>
+
+           <h3 class="mb-0" style="margin-top: 40px">Freelancing website using JSP/Servlet</h3>
+
+            <ul class="fa-ul mb-0">
+             <li>
+            <i class="fas fa-arrow-right"></i>
+            In my 6th semester of Bachelors, I developed one website as a course project.</li>
+            <li><i class="fas fa-arrow-right"></i>
+             I developed freelancing website using JSP and Servlet technology.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            In this website user or company can upload their projects and developer can see this project list.</li>
+              <li><i class="fas fa-arrow-right"></i>
+              If one developer found that he/she can do this project, they can bid on this project, and also they need to write some explanation about why they want to do this project.</li>
+           <li><i class="fas fa-arrow-right"></i>
+             After biding on project, company able to see bidder’s profile and give their project to appropriate developer.</li>
+            <li><i class="fas fa-arrow-right"></i>
+              Here user needs to login on website and provide some details for background check. Moreover, user can login on website via google credential.</li>
+              <li><i class="fas fa-arrow-right"></i>
+               Here I choose java technology for building this website. HTML is use to create webpage and JSP and Servlet is use to apply some logical operation on website. MySQL is use as a database, which store all the login information of users and information about project and bidding.</li>
+               <li><i class="fas fa-arrow-right"></i>
+               I developed this website in 2 weeks and presented it in my class.</li>
+           </ul>
+           <a href='https://github.com/parth967/freelancerjava'> Checkout on GitHub</a>
+
+           <h3 class="mb-0" style="margin-top: 40px">Data Analysis using different methodology</h3>
+
+            <ul class="fa-ul mb-0">
+             <li>
+            <i class="fas fa-arrow-right"></i>
+            I have done the mentioned projects under the certification course of python data science and machine learning course.</li>
+            <li><i class="fas fa-arrow-right"></i>
+             I used python as a programming language and Sklearn library for some exploratory data analysis in all these projects.</li>
+            <li><i class="fas fa-arrow-right"></i>
+            The Seaborn library helps to visualize data.</li>
+              <li><i class="fas fa-arrow-right"></i>
+               Python's pandas' library helps me to perform some data framing in these projects.</li>
+
+               <b><ol>
+           <li>Analysis of 911 Data Set</b>
+
+            <ol>In this project, I applied some normal data manipulation techniques to remove some redundant data.Generally, I build this project to learn some data cleaning activities. I use the Panda library for data framing and use some predefine function to remove redundancy from data like for regression. You can only use some numeric value, so here all the textual information is redundant so you can either remove that or convert in some numerical form.</ol> <a href='https://github.com/parth967/Analysis-on-911-Dataset'> Checkout on GitHub</a>
+
+             </li>
+            <li><b>Analysis of Advertisement Data</b></li>
+            <ol> In this project, I used logistic regression for data analysis.Here, the company wants to analyze features of use to know whether or not a particular user clicks on that website.Here the Logistic regression library helps me to apply exploratory analysis.
+</ol><a href='https://github.com/parth967/LogisticRegression'> Checkout on GitHub</a>
+              <li><b>E-commerce data analysis using Linear Regression</b></li>
+              <ol>This project is built for one clothing company, which sells clothes online and instore both.Here the company has a website and mobile application both, from where users can buy clothes.The company wants to decide whether they must focus on mobile application or website for better user experience.By applying linear regression on some historical data, I found that the company should expand the user experience.
+</ol><a href='https://github.com/parth967/LinearRegression'> Checkout on GitHub</a>
+               <li><b>Data Classification using k-nearest Neighbors</b></li>
+               <ol>  In this project, I applied the K-nearest algorithm to the predefined data set. The motive behind this project is to learn the basics of the k-nearest algorithm function on a large data set.
+</ol><a href='https://github.com/parth967/K-Nearest-Clustering  '> Checkout on GitHub</a>           </ul>
+
+
+
+    </section>
+
+    <hr class="m-0">
+<!----
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="awards">
+      <div class="w-100">
+        <h2 class="mb-5">Professional Development</h2>
+        I know that I am very well in different programming languages. I can adapt any language very quickly because I am self-learner and have a keen knowledge of data structure and algorithm. In addition, I have very strong knowledge of math and majorly on probability and statistics. So, I am very clear at future goal that I want to be a Data Analyst. So, I attend lots of seminar which helps me to achieve my goal.
+        <ul class="fa-ul mb-0">
+          <li>
+            <i class="fas fa-arrow-right"></i>
+            In my first year of college, I attend the seminar on” Internet of Things,” where I learned how to work with different IoT devices and how the flow of data is going from one device to another. Moreover, I gained knowledge about how we can gather data from multiple devices. After attending this seminar, I developed one IoT based tool as my final year project, which collects health related data from women and helps women provide safety.</li>
+          <li>
+            <i class="fas fa-arrow-right"></i>
+            I also take certification from Udemy on “Python for Data Science Machine Learning Bootcamp.” In this certification course, I learned the basics of Data Science and machine learning about how to data science things work and how we apply different methods and algorithms to data to extract some meaningful information from this data. In addition, I learn different machine learning algorithms using some predefine libraries like TensorFlow.</li>
+          <li>
+            <i class="fas fa-arrow-right"></i>
+            Apart from this IoT base seminar, I attend lots of workshops based on Digital Marketing, Python, Python for web development, Latex for Documentation, Communication for professional development, which helps me to increase my programming and interpersonal skills.</li>
+          <li>
+            <i class="fas fa-arrow-right"></i>
+            I currently pursue a business analysis course, which helps me gain insight into the business side. Here, I learn which parameters are beneficial to gain more benefits in business. In the future, I can find those parameters using my data analysis skills, which indirectly helps business grow their reach.</li>
+        </ul>
+      </div>
+    </section>
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="careerpath">
+      <div class="w-100">
+        <h2 class="mb-5">Career Path</h2>
+      <p class="lead mb-5">I am pursuing my studies based on my purest desire, and I hope I'm going in the right direction after completing the course so far, and I'm hoping to make it a fruitful career. From now on, the course helps me to strengthen and develop teamwork, organization, management skills and also Demonstrate withholding a handle on the audience, and I also keep a careful track of the professor's comments on my work, while I want to make sure I don't replicate it. Group project and other group assignment helps me to learn how to coordinate with other team members.</p><p class="lead mb-5">
+I look forward to learning new things from people all the time. I work in Tim Horton's as a baker, so here I adapt Canada's working culture. My coworkers are teaching me many new things about Canadian society. Most importantly, they teach me how to live and how to interact and greet other Canadian citizens here. In Tim Horton’s I joined as a temporary baker, but I craved my way as a permanent baker and Tim member. I'm going to assume I've progressed slowly in my profession, and I'm on the right track. But as my graduation is coming to an end soon, I'm getting ready to face the challenge of corporate work.</p><p class="lead mb-5">
+I feel optimistic about it and have a positive sense that in a market that could mold my profession to the best of the heights, I can crack a good job. My skill and experience help me to stay positive in my chosen career. I know that it's hard for me as an international student without any work experience to get a job in this completive job scenario, but my optimistic thoughts and ability to believe in myself help me keep myself positive.</p>
+
+      </div>
+    </section>
+
+    <hr class="m-0">
+
+    <section class="resume-section p-3 p-lg-5 d-flex align-items-center" id="whyyouhireme">
+      <div class="w-100">
+        <h2 class="mb-5">Why hire me?</h2>
+      <p class="lead mb-5">I do have all the experience and know-how you are looking for. For this role in the business, I am confident that I am the right option.</p><p class="lead mb-5">
+It’s not just based on my education, but I have a lot of experience in the real world that I have conduct event and present myself at a vast stage where I show my ability and prove myself.
+I believe that excellent technical knowledge and great communication skills stand me top than other candidates. I know that I have excellent command on the technical side, where I have worked with lots of projects in different technology. I have worked on web-development, Machine learning and data science projects that show that I have very depth knowledge of the technical side that I know how things are work and which technology and framework required for a particular project.</p><p class="lead mb-5">Moreover, I have learned lots of new things during my post-graduation regarding the business analysis. In my post-graduation, I get to know different business intelligence tools and use these tools and learn how these tools help expand business thoroughly.</p><p class="lead mb-5">In another way, I am a self-motivated person, and with high-quality work, I strive to meet my only ambitions. Being a fast learner, I gain business information that is important to my project.
+And I thrive to believe that I perform well both as an individual contributor and as a team member. All these attributes taken together, individually, make me a total package for this job.
+</p>
+
+      </div>
+    </section>
+
+
+  </div>-->
+
+  <!-- Bootstrap core JavaScript -->
+  <script src="vendor/jquery/jquery.min.js"></script>
+  <script src="vendor/bootstrap/js/bootstrap.bundle.min.js"></script>
+
+  <!-- Plugin JavaScript -->
+  <script src="vendor/jquery-easing/jquery.easing.min.js"></script>
+
+  <!-- Custom scripts for this template -->
+  <script src="js/resume.min.js"></script>
+
+</body>
+
+</html>
