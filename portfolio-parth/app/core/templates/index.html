@@ -1,0 +1,245 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Parth Patel - Data Engineer</title>
+    <!-- Bootstrap CSS -->
+    <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
+    <!-- Font Awesome -->
+    <!-- Custom CSS -->
+    <link rel="stylesheet" type="text/css" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
+
+</head>
+<body>
+    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">     
+        <div class="container">
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarSupportedContent">
+                <ul class="navbar-nav mr-auto">
+                  <li class="nav-item">
+                    <a class="nav-link-icon" target="_blank" href="https://www.linkedin.com/in/parth-patel-72a92611a/">
+                      <i class="fab fa-linkedin fa-lg"></i> <!-- LinkedIn icon -->
+                    </a>
+                  </li>
+                  <li class="nav-item mr-auto">
+                    <a class="nav-link-icon" target="_blank" href="https://github.com/parth967">
+                      <i class="fab fa-github fa-lg"></i> <!-- GitHub icon -->
+                    </a>
+                  </li>
+                </ul>
+              </div>
+            
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#">Home</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Exp">Experience</a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#expertise">Expertise</a>
+                    </li>
+                    <li class="nav-item">
+                      <a class="nav-link"  href="{{ url_for('core.static', filename='core/support/Resume - Parth Patel.pdf') }}" target="_blank">
+                        Resume
+                      </a>
+                    </li>
+              
+                    <li class="nav-item d-lg-none">
+                      <a class="nav-link" href="https://www.linkedin.com/in/parth-patel-72a92611a/" target="_blank">LinkedIn</a>
+                  </li>
+
+                  <li class="nav-item d-lg-none">
+                    <a class="nav-link" href="https://github.com/parth967" target="_blank">GitHub</a>
+                </li>
+                </ul>
+            </div>
+        </div>
+    </nav>
+
+    <div class="container mt-5 intro-cont">
+        <div class="row">
+            <div class="col-md-6">
+                <div class="text-center">
+                    <h1 class="mb-1">Parth Patel</h1>
+                    <p class="dsg"><em>Data Engineer <img src="{{ url_for('core.static', filename='core/images/de_figma.png') }}" alt="Your Icon" style="height: 20px;"> | Data Platform Developer <img src="{{ url_for('core.static', filename='core/images/se_figma.png') }}" alt="Your Icon" style="height: 20px;"></em></p>
+                    <p class="lead">Crafting data-driven solutions with precision engineering and a sprinkle of creativity.</p>
+                    <p>As a data engineer, I specialize in architecting robust pipelines and optimizing data workflows. From building scalable infrastructures to untangling knotty data challenges, I'm here to streamline your data journey.</p>
+                    <p>When I'm not engineering data marvels, you can find me exploring the latest tech trends or seeking adventure in the great outdoors. Let's engineer the future of your data landscape together!</p>
+                    <button id="hire-me-btn" class="btn btn-primary hire-me-btn">Hire Me</button>
+                </div>
+            </div>    
+            <div class="col-md-6 d-flex justify-content-center align-items-center"> <!-- Adjusted column width and alignment -->
+                <div class="rounded-image">
+                    <img src="{{ url_for('core.static', filename='core/images/parth.png') }}" class="" alt="Parth Patel Photo">
+                </div>
+            </div>
+        </div>
+    </div>
+    
+    <div class="container mt-5" id="Exp">
+        <h3 class="mb-4 heading">Experience</h3>
+
+    <div class="container">
+        <div class="main-timeline">
+        
+                                <!-- start experience section-->
+                                <div class="timeline">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <span class="date">
+                                                    <span class="month">6 Months</span>
+                                            <span class="year">2021</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5 class="title">Software Engineer: SHIFT™ / Data Engineer</h5>
+                                        <p class="description">
+                                            In my role, I contribute to cloud migration automation by implementing SHIFT™ generated code on client projects. I continuously explore new technologies aligned with the SHIFT™ Roadmap and troubleshoot performance issues, offering recommendations and solutions. I work extensively with Python, Java, and various business analytics tools like Tableau and PowerBI. Additionally, I handle SQL dialect differences, perform ETL conversions, conduct thorough testing, and actively participate in Agile methodologies, ensuring effective project management and communication.    
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- end experience section-->
+        
+                                <!-- start experience section-->
+                                <div class="timeline">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <span class="date">
+                                                    <span class="month">1 Years</span>
+                                            <span class="year">2022</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5 class="title">IT Developer III</h5>
+                                        <p class="description">
+                                            I lead core data engineering functions, overseeing data modeling, architecture, and ETL processes, with expertise in SQL and diverse ingestion methods. Utilizing advanced Databricks knowledge, I design scalable data processing workflows and ensure optimal performance. Proficiency in Delta Lake enables robust data versioning, while Azure Cloud expertise facilitates scalable data solutions implementation. Additionally, I champion data quality, conduct troubleshooting, and stay updated on industry trends to meet diverse data requirements.
+                                        </p>
+                                    </div>
+                                </div>
+                                <!-- end experience section-->
+        
+                                <!-- start experience section-->
+                                <div class="timeline">
+                                    <div class="icon"></div>
+                                    <div class="date-content">
+                                        <div class="date-outer">
+                                            <span class="date">
+                                                    <span class="month">Since</span>
+                                            <span class="year">2023</span>
+                                            </span>
+                                        </div>
+                                    </div>
+                                    <div class="timeline-content">
+                                        <h5 class="title">Solutios IT Designer</h5>
+                                        <p class="description">
+Lead core data engineering functions, encompassing data modeling, architecture, and ETL processes.
+Demonstrate mastery in SQL, MSSQL, PostgreSQL, Oracle, and handle diverse ingestion methods (DB, API, Parquet, delimited, text, mainframe).
+Apply advanced Databricks knowledge to design scalable data processing workflows, ensuring optimal performance.
+Showcase expertise in Delta Lake for robust data versioning and transactional capabilities, and leverage Azure Cloud to implement and manage scalable data solutions.                                        </p>
+                                    </div>
+                                </div>
+        
+                            </div>
+        </div>
+    </div>
+    <!-- Expertise Section -->
+    <div class="container mt-5" id="expertise">
+        <h3 class="mb-4 heading">Expertise</h3>
+    
+        <div class="row">
+    
+          <!-- Data Ingestion -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/data_collection.png') }}" alt="Data Ingestion Image" class="img-fluid">
+              <h6>Data Ingestion</h6>
+            </div>
+          </div>
+    
+          <!-- Data Processing -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/de_processing.png') }}" alt="Data Processing Image" class="img-fluid">
+              <h6>Data Processing</h6>
+            </div>
+          </div>
+    
+          <!-- Data Storage -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/de_storage.png') }}" alt="Data Storage Image" class="img-fluid">
+              <h6>Data Storage</h6>
+            </div>
+          </div>
+    
+          <!-- Data Transformation -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/data_transformation.png') }}" alt="Data Transformation Image" class="img-fluid">
+              <h6>Data Transformation</h6>
+            </div>
+          </div>
+    
+          <!-- Data Modeling and Analysis -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/de_modeling.png') }}" alt="Data Modeling and Analysis Image" class="img-fluid">
+              <h6>Data Modeling and Analysis</h6>
+            </div>
+          </div>
+    
+          <!-- Data Quality and Governance -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/de_prot.png') }}" alt="Data Quality and Governance Image" class="img-fluid">
+              <h6>Data Quality and Governance</h6>
+            </div>
+          </div>
+    
+          <!-- Scalability and Performance Optimization -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/de_opt.png') }}" alt="Scalability and Performance Optimization Image" class="img-fluid">
+              <h6>Scalability and Performance Optimization</h6>
+            </div>
+          </div>
+    
+          <!-- Monitoring and Maintenance -->
+          <div class="col-lg-3">
+            <div class="section text-center">
+              <img src="{{ url_for('core.static', filename='core/images/data_maintenance.png') }}" alt="Monitoring and Maintenance Image" class="img-fluid">
+              <h6>Monitoring and Maintenance</h6>
+            </div>
+          </div>
+        </div>
+    </div>
+
+      
+
+    <!-- Footer -->
+    <footer class="container mt-5">
+        <p>&copy; 2023 Parth Patel. All rights reserved.</p>
+    </footer>
+
+    <!-- Bootstrap JS -->
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="{{ url_for('core.static', filename='core/js/script.js') }}"></script>
+    <script>
+        document.getElementById('hire-me-btn').addEventListener('click', function() {
+            var subject = "Job Opportunity";
+            var body = "Hello, I am interested in working with you. Please contact me with further details.";
+            window.location.href = 'mailto:pparth967@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
+        });
+    </script>
+</body>
+</html>
