@@ -4,6 +4,7 @@ import sshtunnel
 import pymysql
 import pymysql.cursors
 from dotenv import load_dotenv
+import os
 
 DATA_FILE_LOC = 'sample.txt'
 DB_TOTAL_LIMIT = 10000
@@ -93,15 +94,15 @@ def build_insert_statement(logs):
 def execute_db(query, is_return=False):
     conn = None
     result = None
-    with sshtunnel.SSHTunnelForwarder(('ssh.pythonanywhere.com'),
-                                       ssh_username='Parth967', 
-                                       ssh_password='Parth25111997',
-                                       remote_bind_address=('Parth967.mysql.pythonanywhere-services.com', 3306)
+    with sshtunnel.SSHTunnelForwarder((os.getenv('SSH_HOST')),
+                                       ssh_username=os.getenv('SSH_USERNAME'), 
+                                       ssh_password=os.getenv('SSH_PASSWORD'),
+                                       remote_bind_address=(os.getenv('DB_HOST'), os.getenv('DB_PORT'))
                                      ) as tunnel:
         conn = pymysql.connect(host='127.0.0.1',
-                             user='Parth967',
-                             password='Parth25111997',
-                             database='Parth967$default',
+                             user=os.getenv('DB_USER'),
+                             password=os.getenv('DB_PASSWORD'),
+                             database=os.getenv('DB_NAME'),
                              port=tunnel.local_bind_port,
                              cursorclass=pymysql.cursors.DictCursor)
         with conn.cursor() as cursor:
