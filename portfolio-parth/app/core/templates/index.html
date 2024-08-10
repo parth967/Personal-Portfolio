@@ -224,11 +224,37 @@ Showcase expertise in Delta Lake for robust data versioning and transactional ca
         </div>
     </div>
 
-      
+    <div class="container">
+      <div class="row blog-rows">
+        {% for post in data %}
+          <div class="col-md-6">
+            <div class="card mb-0 blog-card">
+              <div class="row no-gutters">
+                <div class="col-md-6">
+                  <img src="{{ url_for('blog.static', filename=post.Image) }}" class="card-img" alt="Blog Image">
+
+                  <!-- <img src="{{ url_for('blog.static', filename=post.Image) }}" class="card-img" alt="Blog Image"> -->
+                </div>
+                <div class="col-md-6">
+                  <div class="card-body">
+                    <h5 class="card-title blog-header">{{ post.Title }}</h5>
+                    <p class="card-text">{{ post.ShortContent }}</p>
+                    <a href="{{ post.Url }}" class="btn btn-primary">Read More</a>
+                  </div>
+                </div>
+              </div>
+            </div>
+          </div>
+        {% endfor %}
+      </div>
+    </div>
+    
+    
+    
 
     <!-- Footer -->
     <footer class="container mt-5">
-        <p>&copy; 2023 Parth Patel. All rights reserved.</p>
+        <p>&copy; 2024 Parth Patel. All rights reserved.</p>
     </footer>
 
     <!-- Bootstrap JS -->

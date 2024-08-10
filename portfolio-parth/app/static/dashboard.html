@@ -1,0 +1,35 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <title>Interactive Dashboard</title>
+  <link rel="stylesheet" href="https://stackpath.bootstrapcdn.com/bootstrap/5.1.3/css/bootstrap.min.css">
+</head>
+<body>
+  <div class="container mt-5">
+    <h1>Interactive Dashboard</h1>
+    <form id="filterForm">
+      <div class="mb-3">
+        <label for="startDate" class="form-label">Start Date</label>
+        <input type="date" class="form-control" id="startDate" name="startDate">
+      </div>
+      <div class="mb-3">
+        <label for="endDate" class="form-label">End Date</label>
+        <input type="date" class="form-control" id="endDate" name="endDate">
+      </div>
+      <button type="submit" class="btn btn-primary">Apply Filter</button>
+    </form>
+    <div id="dashboardContent" hx-target="#dashboardContent" hx-swap="outerHTML">
+      <!-- Dashboard content will be loaded here -->
+    </div>
+  </div>
+
+  <script src="https://unpkg.com/htmx.org@1.7.0/dist/htmx.min.js" integrity="sha384-0I4tCXzzbTZoN9Xo3Tg8t9y0+X3x9n6H3Rq6yf/uPcH7lJXk9T1xETyzMZM8yAyD" crossorigin="anonymous"></script>
+  <script>
+    document.getElementById('filterForm').addEventListener('htmx:afterSwap', function(event) {
+      // Reinitialize any JavaScript components after content is loaded
+    });
+  </script>
+</body>
+</html>

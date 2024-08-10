@@ -1,0 +1,23 @@
+{
+	"folders": [
+		{
+			"path": "../../../../go_test"
+		},
+		{
+			"path": "../../../../vstream"
+		},
+		{
+			"path": "../../../../doc-compile"
+		},
+		{
+			"path": "../../../../Python Scripts"
+		},
+		{
+			"path": "../../.."
+		},
+		{
+			"path": "../../../../platform"
+		}
+	],
+	"settings": {}
+}
