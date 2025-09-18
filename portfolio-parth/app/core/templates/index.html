@@ -1,68 +1,184 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Parth Patel - Senior Data Engineer | Azure, Databricks, PySpark</title>
+
+    <!-- SEO Meta Tags -->
+    <title>Parth Patel - Senior Data Engineer | Azure Databricks PySpark Expert | Toronto Canada</title>
+    <meta name="description"
+        content="Senior Data Engineer Parth Patel specializes in Azure, Databricks, PySpark, and ETL pipelines. Certified Azure Data Engineer and Google Cloud Professional. Available for hire in Toronto, Canada.">
+    <meta name="keywords"
+        content="data engineer, senior data engineer, azure data engineer, databricks expert, pyspark developer, ETL pipelines, data integration, big data, cloud data engineer, toronto data engineer, canada data engineer, azure certified, google cloud certified, data platform developer, streaming data, delta lake, synapse analytics, data warehouse, data lake, real-time analytics, spark developer, python data engineer, sql expert, data governance, data quality, metadata management">
+    <meta name="author" content="Parth Patel">
+    <meta name="robots" content="index, follow">
+    <meta name="language" content="English">
+    <meta name="geo.region" content="CA-ON">
+    <meta name="geo.placename" content="Toronto">
+    <meta name="geo.position" content="43.6532;-79.3832">
+    <meta name="ICBM" content="43.6532, -79.3832">
+
+    <!-- Open Graph Meta Tags -->
+    <meta property="og:title" content="Parth Patel - Senior Data Engineer | Azure Databricks Expert">
+    <meta property="og:description"
+        content="Experienced Senior Data Engineer specializing in Azure, Databricks, PySpark. Certified professional with expertise in ETL pipelines, data integration, and cloud data platforms.">
+    <meta property="og:type" content="profile">
+    <meta property="og:url" content="https://yourportfolio.com">
+    <meta property="og:image" content="{{ url_for('core.static', filename='core/images/parth.png') }}">
+    <meta property="og:site_name" content="Parth Patel - Data Engineer Portfolio">
+    <meta property="og:locale" content="en_CA">
+
+    <!-- Twitter Card Meta Tags -->
+    <meta namtwitter:card" content="summary_large_image">
+    <meta name="twitter:title" content="Parth Patel - Senior Data Engineer | Azure Databricks Expert">
+    <meta name="twitter:description"
+        content="Senior Data Engineer with expertise in Azure, Databricks, PySpark, ETL pipelines. Certified Azure & Google Cloud Professional.">
+    <meta name="twitter:image" content="{{ url_for('core.static', filename='core/images/parth.png') }}">
+
+    <!-- LinkedIn Meta Tags -->
+    <meta property="article:author" content="https://www.linkedin.com/in/parth-patel-72a92611a/">
+
+    <!-- Canonical URL -->
+    <link rel="canonical" href="https://yourportfolio.com">
+
+    <!-- Structured Data for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Person",
+        "name": "Parth Patel",
+        "jobTitle": "Senior Data Engineer",
+        "description": "Senior Data Engineer specializing in Azure, Databricks, PySpark, ETL pipelines, and cloud data platforms",
+        "url": "https://yourportfolio.com",
+        "image": "{{ url_for('core.static', filename='core/images/parth.jpg') }}",
+        "email": "pparth967@gmail.com",
+        "telephone": "+1-519-778-5965",
+        "address": {
+            "@type": "PostalAddress",
+            "addressLocality": "Toronto",
+            "addressRegion": "ON",
+            "addressCountry": "CA"
+        },
+        "sameAs": [
+            "https://www.linkedin.com/in/parth-patel-72a92611a/",
+            "https://github.com/parth967"
+        ],
+        "worksFor": {
+            "@type": "Organization",
+            "name": "TD Bank"
+        },
+        "alumniOf": [
+            {
+                "@type": "EducationalOrganization",
+                "name": "Gujarat Technological University"
+            },
+            {
+                "@type": "EducationalOrganization", 
+                "name": "Conestoga College"
+            }
+        ],
+        "hasCredential": [
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Microsoft Azure Data Engineer Associate",
+                "credentialCategory": "Professional Certification"
+            },
+            {
+                "@type": "EducationalOccupationalCredential",
+                "name": "Google Cloud Professional Data Engineer",
+                "credentialCategory": "Professional Certification"
+            }
+        ],
+        "knowsAbout": [
+            "Data Engineering",
+            "Azure Databricks",
+            "PySpark",
+            "ETL Pipelines",
+            "Data Integration",
+            "Big Data",
+            "Cloud Computing",
+            "Python",
+            "SQL",
+            "Apache Spark",
+            "Data Warehousing",
+            "Data Lakes",
+            "Stream Processing",
+            "Data Governance"
+        ]
+    }
+    </script>
+
     <!-- Bootstrap CSS -->
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.0-alpha1/dist/css/bootstrap.min.css" rel="stylesheet">
     <!-- Font Awesome -->
+    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
-    <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/5.15.3/css/all.min.css" rel="stylesheet">
 
 </head>
+
 <body>
-    <nav class="navbar navbar-expand-lg navbar-dark bg-dark fixed-top">     
+    <nav class="navbar navbar-expand-lg fixed-top custom-navbar">
         <div class="container">
-            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
+            <!-- Brand/Logo -->
+            <a class="navbar-brand" href="#">
+                <span class="brand-name">Parth Patel</span>
+                <span class="brand-title">Senior Data Engineer</span>
+            </a>
+
+            <!-- Mobile Toggle Button -->
+            <button class="navbar-toggler" type="button" data-bs-toggle="collapse" data-bs-target="#navbarNav"
+                aria-controls="navbarNav" aria-expanded="false" aria-label="Toggle navigation">
                 <span class="navbar-toggler-icon"></span>
             </button>
-            <div class="collapse navbar-collapse" id="navbarSupportedContent">
-                <ul class="navbar-nav mr-auto">
-                  <li class="nav-item">
-                    <a class="nav-link-icon" target="_blank" href="https://www.linkedin.com/in/parth-patel-72a92611a/">
-                      <i class="fab fa-linkedin fa-lg"></i> <!-- LinkedIn icon -->
-                    </a>
-                  </li>
-                  <li class="nav-item mr-auto">
-                    <a class="nav-link-icon" target="_blank" href="https://github.com/parth967">
-                      <i class="fab fa-github fa-lg"></i> <!-- GitHub icon -->
-                    </a>
-                  </li>
-                </ul>
-              </div>
-            
-            <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Home</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#Exp">Experience</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#certifications">Certifications</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#skills">Skills</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#contact">Contact</a>
-                    </li>
-                    <li class="nav-item">
-                      <a class="nav-link"  href="{{ url_for('core.static', filename='core/support/Resume - Parth Patel.pdf') }}" target="_blank">
-                        Resume
-                      </a>
-                    </li>
-              
-                    <li class="nav-item d-lg-none">
-                      <a class="nav-link" href="https://www.linkedin.com/in/parth-patel-72a92611a/" target="_blank">LinkedIn</a>
-                  </li>
 
-                  <li class="nav-item d-lg-none">
-                    <a class="nav-link" href="https://github.com/parth967" target="_blank">GitHub</a>
-                </li>
+            <!-- Navigation Links -->
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav ms-auto align-items-center">
+                    <li class="nav-item">
+                        <a class="nav-link" href="#" data-section="home">
+                            <i class="fas fa-home"></i> Home
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#Exp" data-section="experience">
+                            <i class="fas fa-briefcase"></i> Experience
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#certifications" data-section="certifications">
+                            <i class="fas fa-certificate"></i> Certifications
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#skills" data-section="skills">
+                            <i class="fas fa-code"></i> Skills
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="#contact" data-section="contact">
+                            <i class="fas fa-envelope"></i> Contact
+                        </a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link resume-link"
+                            href="{{ url_for('core.static', filename='core/support/Parth Patel - Resume .pdf') }}"
+                            target="_blank">
+                            <i class="fas fa-download"></i> Resume
+                        </a>
+                    </li>
+
+                    <!-- Social Links -->
+                    <li class="nav-item social-links">
+                        <a class="social-link" target="_blank" href="https://www.linkedin.com/in/parth-patel-72a92611a/"
+                            title="LinkedIn">
+                            <i class="fab fa-linkedin"></i>
+                        </a>
+                        <a class="social-link" target="_blank" href="https://github.com/parth967" title="GitHub">
+                            <i class="fab fa-github"></i>
+                        </a>
+                    </li>
                 </ul>
             </div>
         </div>
@@ -72,25 +188,37 @@
         <div class="row">
             <div class="col-md-6">
                 <div class="text-center">
-                    <h1 class="mb-1">Parth Patel</h1>
-                    <p class="dsg"><em>Senior Data Engineer <img src="{{ url_for('core.static', filename='core/images/de_figma.png') }}" alt="Your Icon" style="height: 20px;"> | Data Platform Developer <img src="{{ url_for('core.static', filename='core/images/se_figma.png') }}" alt="Your Icon" style="height: 20px;"></em></p>
-                    <p class="lead">Results-driven Senior Data Engineer with proven expertise in ETL/ELT frameworks, data integration, and analytics across cloud and on-premises platforms.</p>
-                    <p>Skilled in Azure, Databricks, Synapse, and Power BI with strong proficiency in SQL, PySpark, and Python. Adept at designing scalable data pipelines, optimizing transformations for performance and cost, and enabling trusted, governed data solutions.</p>
-                    <p>Collaborative team player committed to automation, metadata-driven design, and delivering business-ready insights. Currently working at TD Bank as an IT Data Specialist, building enterprise-scale data solutions.</p>
+                    <h1 class="mb-1">Parth Patel - Senior Data Engineer</h1>
+                    <h2 class="dsg"><em>Azure Databricks Expert | PySpark Developer | ETL Specialist <img
+                                src="{{ url_for('core.static', filename='core/images/de_figma.png') }}"
+                                alt="Data Engineer Icon" style="height: 20px;"> | Cloud Data Platform Developer <img
+                                src="{{ url_for('core.static', filename='core/images/se_figma.png') }}"
+                                alt="Software Engineer Icon" style="height: 20px;"></em></h2>
+                    <p class="lead">Results-driven Senior Data Engineer with proven expertise in ETL/ELT frameworks,
+                        data integration, and analytics across cloud and on-premises platforms.</p>
+                    <p>Skilled in Azure, Databricks, Synapse, and Apache Spark with strong proficiency in SQL, PySpark,
+                        and
+                        Python. Adept at designing scalable data pipelines, optimizing transformations for performance
+                        and cost, and enabling trusted, governed data solutions.</p>
+                    <p>Collaborative team player committed to automation, metadata-driven design, and delivering
+                        business-ready insights. Currently working at TD Bank as an IT Data Specialist, building
+                        enterprise-scale data solutions.</p>
                     <button id="hire-me-btn" class="btn btn-primary hire-me-btn">Hire Me</button>
                 </div>
-            </div>    
-            <div class="col-md-6 d-flex justify-content-center align-items-center"> <!-- Adjusted column width and alignment -->
+            </div>
+            <div class="col-md-6 d-flex justify-content-center align-items-center">
+                <!-- Adjusted column width and alignment -->
                 <div class="rounded-image">
-                    <img src="{{ url_for('core.static', filename='core/images/parth.png') }}" class="" alt="Parth Patel Photo">
+                    <img src="{{ url_for('core.static', filename='core/images/parth.jpg') }}" class=""
+                        alt="Parth Patel - Senior Data Engineer specializing in Azure Databricks PySpark ETL pipelines Toronto Canada">
                 </div>
             </div>
         </div>
     </div>
-    
+
     <!-- Experience Section -->
     <div class="container mt-5" id="Exp">
-        <h3 class="mb-4 heading text-center">Professional Experience</h3>
+        <h2 class="mb-4 heading text-center">Senior Data Engineer Experience - Azure, Databricks, PySpark</h2>
         <div class="row">
             <!-- TD Bank -->
             <div class="col-md-4 mb-4">
@@ -100,18 +228,28 @@
                         <h6 class="card-subtitle mb-3">TD Bank</h6>
                         <div class="card-text">
                             <ul class="experience-list">
-                                <li>Designed and implemented a comprehensive metadata-driven Azure Data Integration Framework that streamlined data ingestion, processing, and decision-making workflows across multiple business units</li>
-                                <li>Built and optimized scalable ETL pipelines using Databricks & PySpark, successfully integrating ADLS to Synapse with 40% performance improvement and 25% cost reduction</li>
-                                <li>Developed enterprise-grade Power BI dashboards with advanced DAX calculations and Power Query transformations, integrating data from 15+ enterprise sources</li>
-                                <li>Implemented robust data quality frameworks, lineage tracking, and governance controls ensuring 99.9% data accuracy and regulatory compliance</li>
-                                <li>Partnered with architecture teams to define standardized technology patterns for data ingestion, transformation, and monitoring across the organization</li>
-                                <li>Leveraged Datadog and native Azure monitoring tools to ensure 99.95% system reliability and SLA adherence</li>
+                                <li>Designed and implemented a comprehensive metadata-driven Azure Data Integration
+                                    Framework that streamlined data ingestion, processing, and decision-making workflows
+                                    across multiple business units</li>
+                                <li>Built and optimized scalable ETL pipelines using Databricks & PySpark, successfully
+                                    integrating ADLS to Synapse with 40% performance improvement and 25% cost reduction
+                                </li>
+                                <li>Architected and developed real-time data streaming solutions using Azure Event Hubs
+                                    and Stream Analytics, processing millions of transactions daily with sub-second
+                                    latency</li>
+                                <li>Implemented robust data quality frameworks, lineage tracking, and governance
+                                    controls ensuring 99.9% data accuracy and regulatory compliance</li>
+                                <li>Partnered with architecture teams to define standardized technology patterns for
+                                    data ingestion, transformation, and monitoring across the organization</li>
+                                <li>Designed and maintained Delta Lake architecture for ACID transactions and time
+                                    travel capabilities, managing petabyte-scale data warehouses with optimized
+                                    partitioning strategies</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Next Pathway -->
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm experience-card">
@@ -120,18 +258,25 @@
                         <h6 class="card-subtitle mb-3">Next Pathway Inc.</h6>
                         <div class="card-text">
                             <ul class="experience-list">
-                                <li>Delivered critical cloud migration and ETL modernization projects as part of the SHIFT™ Roadmap, ensuring seamless client adoption with zero data loss</li>
-                                <li>Successfully converted 50+ legacy ETL/ELT pipelines from DataStage to PySpark using automated code generation tools and manual optimization techniques</li>
-                                <li>Developed comprehensive automation scripts and RESTful APIs in Python & Java, utilizing OpenAPI specifications, YAML configurations, XML processing, and Connexion framework</li>
-                                <li>Conducted extensive performance tuning, unit testing, and functional testing to ensure pipeline reliability and 99% uptime</li>
-                                <li>Collaborated closely with analytics teams to deliver actionable business insights using Tableau and Power BI, supporting data-driven decision making</li>
-                                <li>Implemented CI/CD pipelines and automated testing frameworks, reducing deployment time by 60%</li>
+                                <li>Delivered critical cloud migration and ETL modernization projects as part of the
+                                    SHIFT™ Roadmap, ensuring seamless client adoption with zero data loss</li>
+                                <li>Successfully converted 50+ legacy ETL/ELT pipelines from DataStage to PySpark using
+                                    automated code generation tools and manual optimization techniques</li>
+                                <li>Developed comprehensive automation scripts and RESTful APIs in Python & Java,
+                                    utilizing OpenAPI specifications, YAML configurations, XML processing, and Connexion
+                                    framework</li>
+                                <li>Conducted extensive performance tuning, unit testing, and functional testing to
+                                    ensure pipeline reliability and 99% uptime</li>
+                                <li>Collaborated closely with analytics teams to deliver actionable business insights
+                                    using Tableau and Power BI, supporting data-driven decision making</li>
+                                <li>Implemented CI/CD pipelines and automated testing frameworks, reducing deployment
+                                    time by 60%</li>
                             </ul>
                         </div>
                     </div>
                 </div>
             </div>
-            
+
             <!-- Earthbound AI -->
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm experience-card">
@@ -140,12 +285,22 @@
                         <h6 class="card-subtitle mb-3">Earthbound AI</h6>
                         <div class="card-text">
                             <ul class="experience-list">
-                                <li>Built a high-performance geospatial imagery API using Fast API, PostGIS, and Rasterio/GDAL, supporting STAC-compliant search, XYZ tile serving, and real-time image processing</li>
-                                <li>Designed and managed a secure AWS S3 data lake architecture with KMS encryption, VPC endpoints, and IAM least-privilege policies, handling petabytes of satellite imagery</li>
-                                <li>Automated ingestion of Sentinel and Landsat satellite data using Apache Airflow (MWAA), implementing event-driven pipelines with S3, SNS/SQS, and robust retry mechanisms</li>
-                                <li>Implemented Cloud Optimized GeoTIFF (COG) preparation and quality assurance workflows including thumbnail generation, overview creation, and footprint extraction using ECS and Lambda</li>
-                                <li>Optimized CloudFront caching strategies and S3 delivery mechanisms, achieving 70% reduction in latency and 50% decrease in egress costs</li>
-                                <li>Maintained Infrastructure as Code using Terraform for S3, IAM, MWAA, and API Gateway with automated GitHub Actions CI/CD pipelines</li>
+                                <li>Built a high-performance geospatial imagery API using Fast API, PostGIS, and
+                                    Rasterio/GDAL, supporting STAC-compliant search, XYZ tile serving, and real-time
+                                    image processing</li>
+                                <li>Designed and managed a secure AWS S3 data lake architecture with KMS encryption, VPC
+                                    endpoints, and IAM least-privilege policies, handling petabytes of satellite imagery
+                                </li>
+                                <li>Automated ingestion of Sentinel and Landsat satellite data using Apache Airflow
+                                    (MWAA), implementing event-driven pipelines with S3, SNS/SQS, and robust retry
+                                    mechanisms</li>
+                                <li>Implemented Cloud Optimized GeoTIFF (COG) preparation and quality assurance
+                                    workflows including thumbnail generation, overview creation, and footprint
+                                    extraction using ECS and Lambda</li>
+                                <li>Optimized CloudFront caching strategies and S3 delivery mechanisms, achieving 70%
+                                    reduction in latency and 50% decrease in egress costs</li>
+                                <li>Maintained Infrastructure as Code using Terraform for S3, IAM, MWAA, and API Gateway
+                                    with automated GitHub Actions CI/CD pipelines</li>
                             </ul>
                         </div>
                     </div>
@@ -156,7 +311,7 @@
 
     <!-- Certifications Section -->
     <div class="container mt-5" id="certifications">
-        <h3 class="mb-4 heading text-center">Certifications</h3>
+        <h2 class="mb-4 heading text-center">Data Engineering Certifications - Azure & Google Cloud</h2>
         <div class="row justify-content-center">
             <div class="col-md-5 mb-4">
                 <div class="card text-center shadow-sm">
@@ -182,7 +337,7 @@
     </div>
     <!-- Skills Section -->
     <div class="container mt-5" id="skills">
-        <h3 class="mb-4 heading text-center">Technical Skills</h3>
+        <h2 class="mb-4 heading text-center">Data Engineering Skills - Python, SQL, Spark, Cloud Platforms</h2>
         <div class="row">
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
@@ -198,7 +353,7 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
@@ -214,11 +369,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><i class="fas fa-database text-success"></i> Big Data & Analytics</h5>
+                        <h5 class="card-title text-center"><i class="fas fa-database text-success"></i> Big Data &
+                            Analytics</h5>
                         <div class="text-center">
                             <span class="badge bg-success m-1">Apache Spark</span>
                             <span class="badge bg-success m-1">PySpark</span>
@@ -229,11 +385,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><i class="fas fa-exchange-alt text-warning"></i> ETL/ELT Tools</h5>
+                        <h5 class="card-title text-center"><i class="fas fa-exchange-alt text-warning"></i> ETL/ELT
+                            Tools</h5>
                         <div class="text-center">
                             <span class="badge bg-warning text-dark m-1">Talend</span>
                             <span class="badge bg-warning text-dark m-1">Apache NiFi</span>
@@ -243,11 +400,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><i class="fas fa-stream text-secondary"></i> Streaming & Orchestration</h5>
+                        <h5 class="card-title text-center"><i class="fas fa-stream text-secondary"></i> Streaming &
+                            Orchestration</h5>
                         <div class="text-center">
                             <span class="badge bg-secondary m-1">Apache Kafka</span>
                             <span class="badge bg-secondary m-1">Airflow</span>
@@ -256,11 +414,12 @@
                     </div>
                 </div>
             </div>
-            
+
             <div class="col-md-4 mb-4">
                 <div class="card h-100 shadow-sm">
                     <div class="card-body">
-                        <h5 class="card-title text-center"><i class="fas fa-cogs text-dark"></i> DevOps & Automation</h5>
+                        <h5 class="card-title text-center"><i class="fas fa-cogs text-dark"></i> DevOps & Automation
+                        </h5>
                         <div class="text-center">
                             <span class="badge bg-dark m-1">Docker</span>
                             <span class="badge bg-dark m-1">Kubernetes</span>
@@ -279,13 +438,14 @@
 
     <!-- Contact Section -->
     <div class="container mt-5 mb-5" id="contact">
-        <h3 class="mb-4 heading text-center">Get In Touch</h3>
+        <h2 class="mb-4 heading text-center">Hire Senior Data Engineer - Toronto, Canada</h2>
         <div class="row justify-content-center">
             <div class="col-md-8">
                 <div class="card shadow-sm">
                     <div class="card-body text-center">
-                        <p class="lead mb-4">I'm always interested in discussing new opportunities, challenging data engineering projects, or collaborating on innovative solutions.</p>
-                        
+                        <p class="lead mb-4">I'm always interested in discussing new opportunities, challenging data
+                            engineering projects, or collaborating on innovative solutions.</p>
+
                         <div class="row mb-4">
                             <div class="col-md-4 mb-3">
                                 <i class="fas fa-envelope fa-2x text-primary mb-2"></i>
@@ -300,10 +460,11 @@
                                 <p><strong>Location</strong><br>Toronto, Canada</p>
                             </div>
                         </div>
-                        
+
                         <div class="d-flex justify-content-center gap-3">
                             <button id="hire-me-btn-2" class="btn btn-primary btn-lg">Contact Me</button>
-                            <a href="{{ url_for('core.static', filename='core/support/Resume - Parth Patel.pdf') }}" target="_blank" class="btn btn-outline-primary btn-lg">Download Resume</a>
+                            <a href="{{ url_for('core.static', filename='core/support/Parth Patel - Resume .pdf') }}"
+                                target="_blank" class="btn btn-outline-primary btn-lg">Download Resume</a>
                         </div>
                     </div>
                 </div>
@@ -317,29 +478,30 @@
         <h3 class="mb-4 heading">Latest Blog Posts</h3>
         <div class="row blog-rows">
             {% for post in data %}
-              <div class="col-md-6">
+            <div class="col-md-6">
                 <div class="card mb-0 blog-card">
-                  <div class="row no-gutters">
-                    <div class="col-md-6">
-                      <img src="{{ url_for('blog.static', filename=post.Image) }}" class="card-img" alt="Blog Image">
+                    <div class="row no-gutters">
+                        <div class="col-md-6">
+                            <img src="{{ url_for('blog.static', filename=post.Image) }}" class="card-img"
+                                alt="Blog Image">
+                        </div>
+                        <div class="col-md-6">
+                            <div class="card-body">
+                                <h5 class="card-title blog-header">{{ post.Title }}</h5>
+                                <p class="card-text">{{ post.ShortContent }}</p>
+                                <a href="{{ post.Url }}" class="btn btn-primary">Read More</a>
+                            </div>
+                        </div>
                     </div>
-                    <div class="col-md-6">
-                      <div class="card-body">
-                        <h5 class="card-title blog-header">{{ post.Title }}</h5>
-                        <p class="card-text">{{ post.ShortContent }}</p>
-                        <a href="{{ post.Url }}" class="btn btn-primary">Read More</a>
-                      </div>
-                    </div>
-                  </div>
                 </div>
-              </div>
+            </div>
             {% endfor %}
         </div>
     </div>
     {% endif %}
-    
-    
-    
+
+
+
 
     <!-- Footer -->
     <footer class="container mt-5">
@@ -355,14 +517,91 @@
             var body = "Hello Parth,\n\nI am interested in discussing potential opportunities with you. Please contact me with further details.\n\nBest regards,";
             window.location.href = 'mailto:pparth967@gmail.com?subject=' + encodeURIComponent(subject) + '&body=' + encodeURIComponent(body);
         }
-        
+
         document.getElementById('hire-me-btn').addEventListener('click', openEmailClient);
-        
+
         // Add event listener for the second contact button if it exists
         var hireMeBtn2 = document.getElementById('hire-me-btn-2');
         if (hireMeBtn2) {
             hireMeBtn2.addEventListener('click', openEmailClient);
         }
+
+        // Navbar scroll effect and active states
+        document.addEventListener('DOMContentLoaded', function () {
+            const navbar = document.querySelector('.custom-navbar');
+            const navLinks = document.querySelectorAll('.nav-link[data-section]');
+
+            // Navbar scroll effect
+            window.addEventListener('scroll', function () {
+                if (window.scrollY > 50) {
+                    navbar.classList.add('scrolled');
+                } else {
+                    navbar.classList.remove('scrolled');
+                }
+
+                // Update active nav link based on scroll position
+                updateActiveNavLink();
+            });
+
+            // Smooth scrolling for nav links
+            navLinks.forEach(link => {
+                link.addEventListener('click', function (e) {
+                    e.preventDefault();
+                    const targetId = this.getAttribute('href');
+
+                    if (targetId === '#') {
+                        window.scrollTo({
+                            top: 0,
+                            behavior: 'smooth'
+                        });
+                    } else {
+                        const targetElement = document.querySelector(targetId);
+                        if (targetElement) {
+                            const offsetTop = targetElement.offsetTop - 100;
+                            window.scrollTo({
+                                top: offsetTop,
+                                behavior: 'smooth'
+                            });
+                        }
+                    }
+                });
+            });
+
+            function updateActiveNavLink() {
+                const sections = ['Exp', 'certifications', 'skills', 'contact'];
+                const scrollPos = window.scrollY + 150;
+
+                // Remove active class from all links
+                navLinks.forEach(link => link.classList.remove('active'));
+
+                // Check if at top of page
+                if (window.scrollY < 100) {
+                    document.querySelector('.nav-link[data-section="home"]').classList.add('active');
+                    return;
+                }
+
+                // Check which section is currently in view
+                for (let section of sections) {
+                    const element = document.getElementById(section);
+                    if (element) {
+                        const offsetTop = element.offsetTop;
+                        const offsetBottom = offsetTop + element.offsetHeight;
+
+                        if (scrollPos >= offsetTop && scrollPos < offsetBottom) {
+                            const correspondingLink = document.querySelector(`[data-section="${section === 'Exp' ? 'experience' : section}"]`);
+                            if (correspondingLink) {
+                                correspondingLink.classList.add('active');
+                            }
+                            break;
+                        }
+                    }
+                }
+            }
+
+            // Initial call to set active state
+            updateActiveNavLink();
+        });
     </script>
 </body>
+
 </html>

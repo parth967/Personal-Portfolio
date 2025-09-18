@@ -4,35 +4,229 @@
 /* Set background color to black */
 body {
     background-color: #1e1e1e;
-    margin-top: 70px;
+    margin-top: 120px;
     color: #e2e8f0;
 }
 
-/* Navbar styles */
-.navbar {
-    background-color: #4d4d4d; /* Dark Gray (#4d4d4d) */
+/* Modern Navbar Styles */
+.custom-navbar {
+    background: rgba(30, 30, 30, 0.95) !important;
+    backdrop-filter: blur(10px);
+    border-bottom: 2px solid #ef8354;
+    box-shadow: 0 2px 15px rgba(0, 0, 0, 0.4);
+    padding: 0.8rem 0;
+    transition: all 0.3s ease;
+    min-height: 80px;
 }
 
-/* Navbar links color */
+.custom-navbar.scrolled {
+    background: rgba(20, 20, 20, 0.98) !important;
+    backdrop-filter: blur(15px);
+}
+
+/* Brand Styling */
+.navbar-brand {
+    display: flex;
+    flex-direction: column;
+    text-decoration: none !important;
+    margin-right: 2rem;
+}
+
+.brand-name {
+    font-size: 1.5rem;
+    font-weight: 700;
+    color: #ffffff !important;
+    line-height: 1.2;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.5);
+}
+
+.brand-title {
+    font-size: 0.85rem;
+    color: #ef8354 !important;
+    font-weight: 500;
+    margin-top: -2px;
+}
+
+/* Navigation Links */
 .navbar-nav .nav-link {
-    color: #ef8354; /* Terracotta (#ef8354) */
-}
-.navbar-nav .nav-link-icon {
-    color: #f2f2f2; /* Terracotta (#ef8354) */  
-    font-size: 1.3rem;
-    margin: 10%; 
-    margin-right: 10px;
-    box-shadow: 0 0 20px 10px rgba(25, 24, 24, 0.5); /* Faded border effect */
+    color: #ffffff !important;
+    font-weight: 500;
+    font-size: 0.9rem;
+    padding: 0.6rem 1rem !important;
+    margin: 0 0.2rem;
+    border-radius: 20px;
+    transition: all 0.3s ease;
+    position: relative;
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    text-shadow: 1px 1px 2px rgba(0, 0, 0, 0.3);
+    text-decoration: none;
 }
 
-/* Active link color */
-.navbar-nav .nav-item.active .nav-link {
-    color: #007bff; /* Bootstrap's active link color */
+.navbar-nav .nav-link:hover {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #ef8354 0%, #d16d3a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 4px 12px rgba(239, 131, 84, 0.4);
 }
 
-/* Set border color for navbar toggler */
+.navbar-nav .nav-link.active {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #ef8354 0%, #d16d3a 100%);
+    box-shadow: 0 2px 8px rgba(239, 131, 84, 0.3);
+}
+
+.navbar-nav .nav-link i {
+    font-size: 1rem;
+    width: 18px;
+    text-align: center;
+}
+
+/* Resume Link Special Styling */
+.resume-link {
+    background: #ffffff !important;
+    color: #1a202c !important;
+    border-radius: 25px !important;
+    padding: 0.8rem 1.5rem !important;
+    margin-left: 1rem !important;
+    font-weight: 700 !important;
+    font-size: 1rem !important;
+    box-shadow: 0 4px 15px rgba(255, 255, 255, 0.3);
+    border: 2px solid #ef8354 !important;
+    text-shadow: none;
+    text-decoration: none !important;
+    transition: all 0.3s ease;
+}
+
+.resume-link:hover {
+    background: #ef8354 !important;
+    color: #ffffff !important;
+    transform: translateY(-2px) !important;
+    box-shadow: 0 6px 20px rgba(239, 131, 84, 0.6);
+    text-decoration: none !important;
+    border: 2px solid #ffffff !important;
+}
+
+/* Social Links */
+.social-links {
+    display: flex;
+    align-items: center;
+    gap: 0.5rem;
+    margin-left: 1rem;
+}
+
+.social-link {
+    color: #ffffff !important;
+    font-size: 1.2rem;
+    padding: 0.5rem;
+    border-radius: 50%;
+    transition: all 0.3s ease;
+    text-decoration: none;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    width: 38px;
+    height: 38px;
+    background: rgba(255, 255, 255, 0.1);
+    border: 1px solid rgba(255, 255, 255, 0.2);
+}
+
+.social-link:hover {
+    color: #ffffff !important;
+    background: linear-gradient(135deg, #ef8354 0%, #d16d3a 100%);
+    transform: translateY(-2px);
+    box-shadow: 0 3px 10px rgba(239, 131, 84, 0.4);
+}
+
+/* Mobile Navbar Toggler */
+.navbar-toggler {
+    border: 2px solid #ffffff;
+    padding: 0.5rem;
+    border-radius: 8px;
+    background: rgba(255, 255, 255, 0.1);
+}
+
+.navbar-toggler:focus {
+    box-shadow: 0 0 0 0.2rem rgba(255, 255, 255, 0.25);
+}
+
 .navbar-toggler-icon {
-    background-color: #000; /* Black (#000000) */
+    background-image: url("data:image/svg+xml,%3csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 30 30'%3e%3cpath stroke='rgba%28255, 255, 255, 1%29' stroke-linecap='round' stroke-miterlimit='10' stroke-width='3' d='m4 7h22M4 15h22M4 23h22'/%3e%3c/svg%3e");
+    width: 24px;
+    height: 24px;
+}
+
+/* Mobile Responsive */
+@media (max-width: 991px) {
+    body {
+        margin-top: 100px;
+    }
+    
+    .custom-navbar {
+        padding: 0.6rem 0;
+        min-height: 70px;
+    }
+    
+    .navbar-brand {
+        margin-right: 1rem;
+    }
+    
+    .brand-name {
+        font-size: 1.2rem;
+    }
+    
+    .brand-title {
+        font-size: 0.75rem;
+    }
+    
+    .navbar-nav {
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #ef8354;
+        background: rgba(0, 0, 0, 0.2);
+        border-radius: 10px;
+        padding: 1rem;
+    }
+    
+    .navbar-nav .nav-link {
+        padding: 0.8rem 1rem !important;
+        margin: 0.2rem 0;
+        font-size: 1rem;
+        border-radius: 10px;
+        background: rgba(255, 255, 255, 0.05);
+        border: 1px solid rgba(255, 255, 255, 0.1);
+    }
+    
+    .social-links {
+        margin-left: 0;
+        margin-top: 1rem;
+        padding-top: 1rem;
+        border-top: 1px solid #ef8354;
+        justify-content: center;
+    }
+    
+    .resume-link {
+        margin-left: 0 !important;
+        text-align: center;
+        margin-top: 0.5rem !important;
+        padding: 0.8rem 1.4rem !important;
+        font-size: 1rem !important;
+        background: #ffffff !important;
+        color: #1a202c !important;
+        border: 2px solid #ef8354 !important;
+    }
+    
+    .resume-link:hover {
+        background: #ef8354 !important;
+        color: #ffffff !important;
+        border: 2px solid #ffffff !important;
+    }
+    
+    .intro-cont {
+        margin-top: 1rem;
+        padding: 1.5rem;
+    }
 }
 
 /* Summary section */
@@ -375,6 +569,7 @@ footer {
     border-radius: 2%; /* Apply border radius */
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5); /* Faded border effect */
     border: 1px solid #4a5568;
+    margin-top: 2rem;
 }
 
 .heading{
