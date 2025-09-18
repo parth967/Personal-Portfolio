@@ -5,7 +5,7 @@
 body {
     background-color: #1e1e1e;
     margin-top: 70px;
-    color: #d8dbe2;
+    color: #e2e8f0;
 }
 
 /* Navbar styles */
@@ -365,20 +365,24 @@ footer {
 }
 
 .intro-cont{
-    background-color: #222831;
-    color: #e0e2e6;
+    background: linear-gradient(135deg, #222831 0%, #2d353f 100%);
+    color: #f7fafc;
     width: 100%;
     height: 100%;
     object-fit: cover;
     transition: opacity 0.5s ease;
-    padding: 1%;
+    padding: 2rem;
     border-radius: 2%; /* Apply border radius */
     box-shadow: 0 0 20px 10px rgba(0, 0, 0, 0.5); /* Faded border effect */
+    border: 1px solid #4a5568;
 }
 
 .heading{
     text-align: center;
     color: #ef8354;
+    font-weight: 600;
+    font-size: 2.2rem;
+    margin-bottom: 2rem !important;
 }
 
 .blog-card{
@@ -399,4 +403,229 @@ footer {
     height: auto; /* Set height to auto */
     object-fit: cover; /* Maintain aspect ratio */
     width: 100%; /* Ensure image fills the column width */
+}
+
+/* Professional Card Styles */
+.card {
+    background-color: #2d353f;
+    border: 1px solid #4a5568;
+    transition: transform 0.3s ease, box-shadow 0.3s ease;
+}
+
+.card:hover {
+    transform: translateY(-5px);
+    box-shadow: 0 8px 25px rgba(0, 0, 0, 0.3);
+}
+
+.card-title {
+    color: #ef8354 !important;
+    font-weight: 600;
+    font-size: 1.1rem;
+}
+
+.card-subtitle {
+    color: #cbd5e0 !important;
+    font-weight: 500;
+}
+
+.card-text {
+    color: #e2e8f0 !important;
+    line-height: 1.6;
+}
+
+/* Experience Card Specific Styles */
+.experience-card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+}
+
+.experience-card .card-body {
+    padding: 1.5rem;
+}
+
+.experience-list {
+    list-style: none;
+    padding-left: 0;
+    margin-bottom: 0;
+}
+
+.experience-list li {
+    color: #e2e8f0 !important;
+    margin-bottom: 0.8rem;
+    padding-left: 1.2rem;
+    position: relative;
+    line-height: 1.5;
+    font-size: 0.9rem;
+}
+
+.experience-list li:before {
+    content: "▸";
+    color: #ef8354;
+    font-weight: bold;
+    position: absolute;
+    left: 0;
+    top: 0;
+}
+
+.experience-list li:last-child {
+    margin-bottom: 0;
+}
+
+/* Badge Styles */
+.badge {
+    font-size: 0.8rem;
+    padding: 0.5rem 0.8rem;
+    margin: 0.2rem;
+}
+
+/* Certification Cards */
+#certifications .card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+}
+
+#certifications .card:hover {
+    background: linear-gradient(135deg, #3a4149 0%, #2d353f 100%);
+}
+
+/* Contact Section */
+#contact .card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+    border: 1px solid #4a5568;
+}
+
+/* Skills Section Icons */
+.fas {
+    margin-bottom: 1rem;
+}
+
+/* Smooth scrolling */
+html {
+    scroll-behavior: smooth;
+}
+
+/* Section spacing */
+.container {
+    margin-bottom: 2rem;
+}
+
+/* Button improvements */
+.btn-primary {
+    background-color: #ef8354;
+    border-color: #ef8354;
+}
+
+.btn-primary:hover {
+    background-color: #d16d3a;
+    border-color: #d16d3a;
+}
+
+.btn-outline-primary {
+    color: #ef8354;
+    border-color: #ef8354;
+}
+
+.btn-outline-primary:hover {
+    background-color: #ef8354;
+    border-color: #ef8354;
+}
+
+/* Responsive improvements */
+@media (max-width: 768px) {
+    .intro-cont {
+        padding: 2rem 1rem;
+    }
+    
+    .rounded-image {
+        width: 200px;
+        height: 250px;
+        margin: 0 auto;
+    }
+    
+    .card-body {
+        padding: 1rem;
+    }
+}
+/* Imp
+roved Text Contrast */
+p, .lead {
+    color: #e2e8f0 !important;
+    line-height: 1.6;
+}
+
+h1, h2, h3, h4, h5, h6 {
+    color: #f7fafc !important;
+}
+
+/* Certification Cards Enhanced */
+#certifications .card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+    border: 1px solid #4a5568;
+}
+
+#certifications .card-title {
+    color: #ef8354 !important;
+    font-weight: 600;
+}
+
+#certifications .card-text {
+    color: #e2e8f0 !important;
+}
+
+/* Skills Section Enhanced */
+#skills .card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+    border: 1px solid #4a5568;
+}
+
+#skills .card-title {
+    color: #f7fafc !important;
+    font-weight: 600;
+}
+
+/* Contact Section Enhanced */
+#contact .card {
+    background: linear-gradient(135deg, #2d353f 0%, #3a4149 100%);
+    border: 1px solid #4a5568;
+}
+
+#contact .lead {
+    color: #e2e8f0 !important;
+    font-size: 1.1rem;
+}
+
+#contact p {
+    color: #e2e8f0 !important;
+}
+
+#contact strong {
+    color: #f7fafc !important;
+}
+
+/* Footer Enhancement */
+footer p {
+    color: #cbd5e0 !important;
+}
+
+/* Introduction Section Text */
+.intro-cont p {
+    color: #f7fafc !important;
+}
+
+.intro-cont .lead {
+    color: #e2e8f0 !important;
+    font-size: 1.2rem;
+    font-weight: 500;
+}
+
+.dsg {
+    color: #cbd5e0 !important;
+}
+
+/* Navbar Enhancement */
+.navbar-nav .nav-link {
+    color: #ef8354 !important;
+    font-weight: 500;
+}
+
+.navbar-nav .nav-link:hover {
+    color: #f7fafc !important;
 }
