@@ -36,7 +36,7 @@
     <meta property="og:locale" content="en_CA">
 
     <!-- Twitter Card Meta Tags -->
-    <meta namtwitter:card" content="summary_large_image">
+    <meta name="twitter:card" content="summary_large_image">
     <meta name="twitter:title" content="Parth Patel - Senior Data Engineer | Azure Databricks Expert">
     <meta name="twitter:description"
         content="Senior Data Engineer with expertise in Azure, Databricks, PySpark, ETL pipelines. Certified Azure & Google Cloud Professional.">
@@ -230,6 +230,24 @@
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <!-- Custom CSS -->
     <link rel="stylesheet" type="text/css" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
+    
+    <!-- Prevent JSON Flash -->
+    <style>
+        /* Hide any potential JSON content that might flash */
+        script[type="application/ld+json"] {
+            display: none !important;
+        }
+        
+        /* Loading state to prevent flash of unstyled content */
+        body {
+            opacity: 0;
+            transition: opacity 0.3s ease-in-out;
+        }
+        
+        body.loaded {
+            opacity: 1;
+        }
+    </style>
 
     <!-- Microsoft Clarity -->
     <script type="text/javascript">
@@ -238,6 +256,19 @@
             t = l.createElement(r); t.async = 1; t.src = "https://www.clarity.ms/tag/" + i;
             y = l.getElementsByTagName(r)[0]; y.parentNode.insertBefore(t, y);
         })(window, document, "clarity", "script", "t2k5bt18j9");
+    </script>
+    
+    <!-- Loading State Handler -->
+    <script>
+        // Show content once DOM is ready
+        document.addEventListener('DOMContentLoaded', function() {
+            document.body.classList.add('loaded');
+        });
+        
+        // Fallback in case DOMContentLoaded doesn't fire
+        window.addEventListener('load', function() {
+            document.body.classList.add('loaded');
+        });
     </script>
 
 </head>
