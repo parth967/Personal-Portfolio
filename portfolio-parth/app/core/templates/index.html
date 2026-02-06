@@ -147,25 +147,28 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            {
-                "@type": "ListItem",
-                "position": 1,
-                "name": "Home",
-                "item": "https://yourportfolio.com/"
-            },
-            {
-                "@type": "ListItem",
-                "position": 2,
-                "name": "Senior Data Engineer",
-                "item": "https://yourportfolio.com/#experience"
-            },
-            {
-                "@type": "ListItem",
-                "position": 3,
-                "name": "Azure Databricks Expert",
-                "item": "https://yourportfolio.com/#skills"
-            }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourportfolio.com/" },
+            { "@type": "ListItem", "position": 2, "name": "Senior Data Engineer", "item": "https://yourportfolio.com/#experience" },
+            { "@type": "ListItem", "position": 3, "name": "Azure Databricks Expert", "item": "https://yourportfolio.com/#skills" },
+            { "@type": "ListItem", "position": 4, "name": "Free Consultation", "item": "https://yourportfolio.com/#consultation" }
         ]
+    }
+    </script>
+
+    <!-- Service / Consultation Schema for SEO -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "Service",
+        "name": "Free Data Engineering Consultation",
+        "description": "Book a free consultation with Parth Patel to discuss data engineering projects, Azure Databricks, ETL pipelines, or career advice. Toronto-based, available remotely.",
+        "provider": {
+            "@type": "Person",
+            "name": "Parth Patel",
+            "jobTitle": "Senior Data Engineer",
+            "email": "pparth967@gmail.com"
+        },
+        "areaServed": { "@type": "Country", "name": "Canada" }
     }
     </script>
 
@@ -332,7 +335,7 @@
     <nav class="navbar navbar-expand-lg fixed-top modern-navbar">
         <div class="container-fluid px-4">
             <!-- Brand/Logo -->
-            <a class="navbar-brand modern-brand" href="#" aria-label="Parth Patel Portfolio">
+            <a class="navbar-brand modern-brand" href="#home" aria-label="Parth Patel Portfolio">
                 <div class="brand-container">
                     <span class="brand-name">Parth Patel</span>
                     <span class="brand-subtitle">Senior Data Engineer</span>
@@ -350,59 +353,20 @@
 
             <!-- Navigation Links -->
             <div class="collapse navbar-collapse" id="navbarNav">
-                <ul class="navbar-nav ms-auto align-items-center">
-                    <li class="nav-item">
-                        <a class="nav-link modern-nav-link" href="#home" data-section="home">
-                            <i class="fas fa-home"></i>
-                            <span>Home</span>
-                        </a>
+                <ul class="navbar-nav nav-main ms-auto align-items-center">
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#home" data-section="home"><span>Home</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#experience" data-section="experience"><span>Experience</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#certifications" data-section="certifications"><span>Certifications</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#skills" data-section="skills"><span>Skills</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#blog" data-section="blog"><span>Blog</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#contact" data-section="contact"><span>Contact</span></a></li>
+                    <li class="nav-item"><a class="nav-link modern-nav-link" href="#consultation" data-section="consultation"><span>Let's Talk</span></a></li>
+                    <li class="nav-item nav-cta-wrap">
+                        <a class="btn btn-modern-primary nav-cta" href="#consultation" aria-label="Free consultation"><span>Free Consultation</span></a>
                     </li>
-                    <li class="nav-item">
-                        <a class="nav-link modern-nav-link" href="#experience" data-section="experience">
-                            <i class="fas fa-briefcase"></i>
-                            <span>Experience</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link modern-nav-link" href="#certifications" data-section="certifications">
-                            <i class="fas fa-award"></i>
-                            <span>Certifications</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link modern-nav-link" href="#skills" data-section="skills">
-                            <i class="fas fa-code"></i>
-                            <span>Skills</span>
-                        </a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link modern-nav-link" href="#contact" data-section="contact">
-                            <i class="fas fa-envelope"></i>
-                            <span>Contact</span>
-                        </a>
-                    </li>
-
-                    <!-- CTA Button -->
-                    <li class="nav-item">
-                        <a class="btn btn-modern-primary nav-cta"
-                            href="{{ url_for('core.static', filename='core/support/Parth Patel - Resume .pdf') }}"
-                            target="_blank" aria-label="Download Resume">
-                            <i class="fas fa-download"></i>
-                            <span>Resume</span>
-                        </a>
-                    </li>
-
-                    <!-- Social Links -->
                     <li class="nav-item social-container">
-                        <a class="social-link linkedin" target="_blank"
-                            href="https://www.linkedin.com/in/parth-patel-72a92611a/" title="LinkedIn Profile"
-                            aria-label="LinkedIn">
-                            <i class="fab fa-linkedin-in"></i>
-                        </a>
-                        <a class="social-link github" target="_blank" href="https://github.com/parth967"
-                            title="GitHub Profile" aria-label="GitHub">
-                            <i class="fab fa-github"></i>
-                        </a>
+                        <a class="social-link linkedin" target="_blank" href="https://www.linkedin.com/in/parth-patel-72a92611a/" aria-label="LinkedIn"><i class="fab fa-linkedin-in"></i></a>
+                        <a class="social-link github" target="_blank" href="https://github.com/parth967" aria-label="GitHub"><i class="fab fa-github"></i></a>
                     </li>
                 </ul>
             </div>
@@ -466,10 +430,10 @@
                         </div>
 
                         <div class="hero-actions">
-                            <button id="hire-me-btn" class="btn btn-modern-primary btn-lg">
-                                <i class="fas fa-handshake"></i>
-                                <span>Let's Work Together</span>
-                            </button>
+                            <a href="#consultation" class="btn btn-modern-primary btn-lg">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Book a Free Consultation</span>
+                            </a>
                             <a href="#experience" class="btn btn-modern-outline btn-lg">
                                 <i class="fas fa-arrow-down"></i>
                                 <span>View My Work</span>
@@ -767,52 +731,44 @@
                     Get In Touch
                 </span>
                 <h2 class="section-title">Let's Build Something Amazing</h2>
-                <p class="section-subtitle">Ready to discuss your next data engineering project or explore new
-                    opportunities</p>
+                <p class="section-subtitle">Ready to discuss your next data engineering project or explore new opportunities. Reach out anytime.</p>
             </div>
 
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-card animate-fade-in-up">
                         <p class="lead mb-4" style="color: var(--text-secondary); font-size: 1.1rem;">
-                            I'm always interested in discussing new opportunities, challenging data engineering
-                            projects,
-                            or collaborating on innovative solutions that drive business value through data.
+                            I'm always interested in discussing new opportunities, challenging data engineering projects, or collaborating on innovative solutions that drive business value through data.
                         </p>
 
                         <div class="contact-info">
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-envelope"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-envelope"></i></div>
                                 <h6>Email</h6>
-                                <p>pparth967@gmail.com</p>
+                                <div class="contact-email-row">
+                                    <span class="contact-email-text" id="contact-email-display">pparth967@gmail.com</span>
+                                    <button type="button" class="btn btn-copy-email" id="copy-email-btn" title="Copy email" aria-label="Copy email address">
+                                        <i class="fas fa-copy"></i>
+                                        <span class="copy-text">Copy</span>
+                                    </button>
+                                </div>
                             </div>
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-phone"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-phone"></i></div>
                                 <h6>Phone</h6>
                                 <p>+1 (519) 778-5965</p>
                             </div>
                             <div class="contact-item">
-                                <div class="contact-icon">
-                                    <i class="fas fa-map-marker-alt"></i>
-                                </div>
+                                <div class="contact-icon"><i class="fas fa-map-marker-alt"></i></div>
                                 <h6>Location</h6>
-                                <p>Toronto, Canada</p>
+                                <p>Toronto, Canada • Remote & On-site</p>
                             </div>
                         </div>
 
                         <div class="contact-actions">
-                            <button id="hire-me-btn-2" class="btn btn-modern-primary btn-lg">
-                                <i class="fas fa-handshake"></i>
-                                <span>Start a Conversation</span>
-                            </button>
-                            <a href="{{ url_for('core.static', filename='core/support/Parth Patel - Resume .pdf') }}"
-                                target="_blank" class="btn btn-modern-outline btn-lg">
-                                <i class="fas fa-download"></i>
-                                <span>Download Resume</span>
+                            <a href="#consultation" class="btn btn-modern-primary btn-lg">
+                                <i class="fas fa-calendar-check"></i>
+                                <span>Book a Free Consultation</span>
                             </a>
                         </div>
                     </div>
@@ -821,8 +777,59 @@
         </div>
     </section>
 
-    <!-- Blog Section -->
-    {% if data %}
+    <!-- Free Consultation Form Section -->
+    <section id="consultation" class="consultation-section">
+        <div class="container">
+            <div class="section-header">
+                <span class="section-badge">
+                    <i class="fas fa-comments"></i>
+                    Let's Talk
+                </span>
+                <h2 class="section-title">Free Consultation</h2>
+                <p class="section-subtitle">Tell me about your project, idea, or question. I'll get back to you within 24–48 hours.</p>
+            </div>
+
+            <div class="row justify-content-center">
+                <div class="col-lg-7">
+                    <div class="consultation-card animate-fade-in-up">
+                        <form id="consultation-form" class="consultation-form">
+                            <div class="mb-3">
+                                <label for="consult-name" class="form-label">Name <span class="text-danger">*</span></label>
+                                <input type="text" class="form-control form-control-modern" id="consult-name" name="name" required placeholder="Your name">
+                            </div>
+                            <div class="mb-3">
+                                <label for="consult-email" class="form-label">Email <span class="text-danger">*</span></label>
+                                <input type="email" class="form-control form-control-modern" id="consult-email" name="email" required placeholder="you@example.com">
+                            </div>
+                            <div class="mb-3">
+                                <label for="consult-topic" class="form-label">Topic</label>
+                                <select class="form-select form-control-modern" id="consult-topic" name="topic">
+                                    <option value="">What would you like to discuss?</option>
+                                    <option value="Data Engineering">Data Engineering</option>
+                                    <option value="Azure / Databricks">Azure / Databricks</option>
+                                    <option value="ETL & Pipelines">ETL & Pipelines</option>
+                                    <option value="Career Advice">Career Advice</option>
+                                    <option value="Project Collaboration">Project Collaboration</option>
+                                    <option value="Other">Other</option>
+                                </select>
+                            </div>
+                            <div class="mb-4">
+                                <label for="consult-message" class="form-label">Message <span class="text-danger">*</span></label>
+                                <textarea class="form-control form-control-modern" id="consult-message" name="message" rows="4" required placeholder="Tell me about your project or question..."></textarea>
+                            </div>
+                            <button type="submit" class="btn btn-modern-primary btn-lg w-100" id="consult-submit-btn">
+                                <i class="fas fa-paper-plane"></i>
+                                <span>Send Message</span>
+                            </button>
+                            <div id="consultation-message" class="mt-3 small text-center" style="display: none;"></div>
+                        </form>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Blog Section (from Medium) -->
     <section id="blog" class="blog-section">
         <div class="container">
             <div class="section-header">
@@ -831,7 +838,7 @@
                     Latest Insights
                 </span>
                 <h2 class="section-title">Blog Posts</h2>
-                <p class="section-subtitle">Sharing knowledge and insights about data engineering and technology</p>
+                <p class="section-subtitle">Sharing knowledge and insights about data engineering and technology. New posts from <a href="https://medium.com/@pparth967" target="_blank" rel="noopener">Medium</a> appear here automatically.</p>
             </div>
 
             <div class="row g-4">
@@ -839,24 +846,36 @@
                 <div class="col-lg-6">
                     <article class="blog-card animate-fade-in-up">
                         <div class="blog-image">
-                            <img src="{{ url_for('blog.static', filename=post.Image) }}" alt="{{ post.Title }}"
-                                loading="lazy">
+                            {% if post.Image and post.Image.startswith('http') and 'miro.medium.com' in post.Image %}
+                            <img src="{{ post.Image }}" alt="{{ post.Title }}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'blog-image-placeholder\\' style=\\'background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);\\'><div class=\\'blog-placeholder-content\\'><i class=\\'fas fa-blog\\'></i><span>Data Engineering</span></div></div>';">
+                            {% else %}
+                            <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);">
+                                <div class="blog-placeholder-content">
+                                    <i class="fas fa-blog"></i>
+                                    <span>Data Engineering</span>
+                                </div>
+                            </div>
+                            {% endif %}
                         </div>
                         <div class="blog-content">
                             <h5 class="blog-title">{{ post.Title }}</h5>
                             <p class="blog-excerpt">{{ post.ShortContent }}</p>
-                            <a href="{{ post.Url }}" class="btn btn-modern-outline">
-                                <span>Read More</span>
-                                <i class="fas fa-arrow-right"></i>
+                            <a href="{{ post.Url }}" target="_blank" rel="noopener" class="btn btn-modern-outline">
+                                <span>Read on Medium</span>
+                                <i class="fas fa-external-link-alt"></i>
                             </a>
                         </div>
                     </article>
+                </div>
+                {% else %}
+                <div class="col-12 text-center py-5">
+                    <p class="text-muted">Loading posts from Medium...</p>
+                    <a href="https://medium.com/@pparth967" target="_blank" rel="noopener" class="btn btn-modern-outline">View all on Medium</a>
                 </div>
                 {% endfor %}
             </div>
         </div>
     </section>
-    {% endif %}
 
 
 
@@ -889,19 +908,62 @@
     <script>
         // Modern Portfolio JavaScript
         document.addEventListener('DOMContentLoaded', function () {
-            // Email functionality
-            function openEmailClient() {
-                const subject = "Data Engineering Opportunity - Let's Connect";
-                const body = "Hello Parth,\n\nI'm interested in discussing potential data engineering opportunities with you. I'd love to learn more about your expertise and explore how we might work together.\n\nBest regards,";
-                window.location.href = `mailto:pparth967@gmail.com?subject=${encodeURIComponent(subject)}&body=${encodeURIComponent(body)}`;
+            // Copy email button
+            const copyBtn = document.getElementById('copy-email-btn');
+            const emailDisplay = document.getElementById('contact-email-display');
+            const email = 'pparth967@gmail.com';
+            if (copyBtn && emailDisplay) {
+                copyBtn.addEventListener('click', function () {
+                    navigator.clipboard.writeText(email).then(function () {
+                        const span = copyBtn.querySelector('.copy-text');
+                        const icon = copyBtn.querySelector('i.fa-copy');
+                        if (span) span.textContent = 'Copied!';
+                        if (icon) { icon.classList.remove('fa-copy'); icon.classList.add('fa-check'); }
+                        copyBtn.classList.add('copied');
+                        setTimeout(function () {
+                            if (span) span.textContent = 'Copy';
+                            if (icon) { icon.classList.remove('fa-check'); icon.classList.add('fa-copy'); }
+                            copyBtn.classList.remove('copied');
+                        }, 2000);
+                    });
+                });
             }
 
-            // Attach email functionality to buttons
-            const hireBtn1 = document.getElementById('hire-me-btn');
-            const hireBtn2 = document.getElementById('hire-me-btn-2');
-
-            if (hireBtn1) hireBtn1.addEventListener('click', openEmailClient);
-            if (hireBtn2) hireBtn2.addEventListener('click', openEmailClient);
+            // Consultation form submit
+            const form = document.getElementById('consultation-form');
+            const msgEl = document.getElementById('consultation-message');
+            const submitBtn = document.getElementById('consult-submit-btn');
+            if (form) {
+                form.addEventListener('submit', function (e) {
+                    e.preventDefault();
+                    if (!submitBtn || !msgEl) return;
+                    submitBtn.disabled = true;
+                    submitBtn.querySelector('span').textContent = 'Sending...';
+                    const fd = new FormData(form);
+                    fetch('{{ url_for("core.consultation_submit") }}', { method: 'POST', body: fd })
+                        .then(function (r) { return r.json().then(function (j) { return { ok: r.ok, json: j }; }); })
+                        .then(function (result) {
+                            msgEl.style.display = 'block';
+                            if (result.ok && result.json.success) {
+                                msgEl.className = 'mt-3 small text-center text-success';
+                                msgEl.textContent = "Thanks! I'll get back to you soon.";
+                                form.reset();
+                            } else {
+                                msgEl.className = 'mt-3 small text-center text-danger';
+                                msgEl.textContent = result.json.error || 'Something went wrong. Please email me directly.';
+                            }
+                        })
+                        .catch(function () {
+                            msgEl.style.display = 'block';
+                            msgEl.className = 'mt-3 small text-center text-danger';
+                            msgEl.textContent = 'Could not send. Please email pparth967@gmail.com directly.';
+                        })
+                        .finally(function () {
+                            submitBtn.disabled = false;
+                            submitBtn.querySelector('span').textContent = 'Send Message';
+                        });
+                });
+            }
 
             // Modern navbar functionality
             const navbar = document.querySelector('.modern-navbar');
