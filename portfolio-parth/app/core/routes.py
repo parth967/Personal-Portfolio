@@ -25,7 +25,7 @@ def community_redirect():
 
 @core_bp.route('/favicon.ico')
 def favicon():
-    return redirect(url_for('core.static', filename='core/images/parth.png'), code=302)
+    return redirect(url_for('core.static', filename='core/images/favicon.svg'), code=302)
 
 @core_bp.route('/consultation', methods=['POST'])
 def consultation_submit():
