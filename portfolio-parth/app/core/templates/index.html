@@ -1,18 +1,22 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" dir="ltr">
 
 <head>
+    {% set base_url = request.url_root.rstrip('/') if request.url_root else 'https://yourportfolio.com' %}
     <meta charset="UTF-8">
+    <meta http-equiv="content-language" content="en">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=5.0, user-scalable=yes">
     <meta name="mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
     <meta name="apple-mobile-web-app-title" content="Parth Patel - Data Engineer">
 
-    <!-- Enhanced SEO Meta Tags -->
-    <title>Parth Patel - Senior Data Engineer | Azure Databricks PySpark Expert | Toronto Canada</title>
+    <link rel="icon" href="{{ url_for('core.static', filename='core/images/parth.png') }}" type="image/png" sizes="any">
+
+    <!-- SEO Meta Tags -->
+    <title>Parth Patel | Senior Data Engineer | Azure, Databricks, PySpark | Toronto</title>
     <meta name="description"
-        content="Senior Data Engineer Parth Patel specializes in Azure, Databricks, PySpark, and ETL pipelines. Certified Azure Data Engineer and Google Cloud Professional. Available for hire in Toronto, Canada.">
+        content="Parth Patel is a Senior Data Engineer in Toronto specializing in Azure, Databricks, and PySpark. Certified Azure & Google Cloud. Available for hire—book a free consultation.">
     <meta name="keywords"
         content="data engineer, senior data engineer, azure data engineer, databricks expert, pyspark developer, ETL pipelines, data integration, big data, cloud data engineer, toronto data engineer, canada data engineer, azure certified, google cloud certified, data platform developer, streaming data, delta lake, synapse analytics, data warehouse, data lake, real-time analytics, spark developer, python data engineer, sql expert, data governance, data quality, metadata management, machine learning engineer, AI engineer, data scientist">
     <meta name="author" content="Parth Patel">
@@ -49,8 +53,8 @@
     <!-- LinkedIn Meta Tags -->
     <meta property="article:author" content="https://www.linkedin.com/in/parth-patel-72a92611a/">
 
-    <!-- Canonical URL -->
-    <link rel="canonical" href="https://yourportfolio.com">
+    <!-- Canonical and self-referencing alternate -->
+    <link rel="canonical" href="{{ base_url }}/">
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -125,21 +129,15 @@
     <meta name="dns-prefetch" content="//fonts.gstatic.com">
     <meta name="dns-prefetch" content="//cdn.jsdelivr.net">
     <meta name="dns-prefetch" content="//cdnjs.cloudflare.com">
-    <link rel="preload" href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&display=swap"
-        as="style">
-    <link rel="preload" href="{{ url_for('core.static', filename='core/css/styles.css') }}" as="style">
     <link rel="preload" href="{{ url_for('core.static', filename='core/images/parth.jpg') }}" as="image">
 
     <!-- Sitemap & RSS -->
     <link rel="sitemap" type="application/xml" href="/sitemap.xml">
     <link rel="alternate" type="application/rss+xml" title="Parth Patel - Data Engineer Blog" href="/rss.xml">
 
-    <!-- Hreflang for International SEO -->
-    <link rel="alternate" hreflang="en" href="https://yourportfolio.com/">
-    <link rel="alternate" hreflang="en-ca" href="https://yourportfolio.com/">
-    <link rel="alternate" hreflang="en-us" href="https://yourportfolio.com/us/">
-    <link rel="alternate" hreflang="en-gb" href="https://yourportfolio.com/uk/">
-    <link rel="alternate" hreflang="x-default" href="https://yourportfolio.com/">
+    <!-- Hreflang: include self (current page) and x-default -->
+    <link rel="alternate" hreflang="x-default" href="{{ base_url }}/">
+    <link rel="alternate" hreflang="en" href="{{ base_url }}/">
 
     <!-- Breadcrumb Schema -->
     <script type="application/ld+json">
@@ -147,10 +145,10 @@
         "@context": "https://schema.org",
         "@type": "BreadcrumbList",
         "itemListElement": [
-            { "@type": "ListItem", "position": 1, "name": "Home", "item": "https://yourportfolio.com/" },
-            { "@type": "ListItem", "position": 2, "name": "Senior Data Engineer", "item": "https://yourportfolio.com/#experience" },
-            { "@type": "ListItem", "position": 3, "name": "Azure Databricks Expert", "item": "https://yourportfolio.com/#skills" },
-            { "@type": "ListItem", "position": 4, "name": "Free Consultation", "item": "https://yourportfolio.com/#consultation" }
+            { "@type": "ListItem", "position": 1, "name": "Home", "item": "{{ base_url }}/" },
+            { "@type": "ListItem", "position": 2, "name": "Senior Data Engineer", "item": "{{ base_url }}/#experience" },
+            { "@type": "ListItem", "position": 3, "name": "Azure Databricks Expert", "item": "{{ base_url }}/#skills" },
+            { "@type": "ListItem", "position": 4, "name": "Free Consultation", "item": "{{ base_url }}/#consultation" }
         ]
     }
     </script>
@@ -214,19 +212,13 @@
     }
     </script>
 
-    <!-- Modern Fonts -->
+    <!-- Combined: fonts + Bootstrap + Font Awesome + custom (single combined request not possible without build; we keep 2 external + 1 local to reduce files) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link
-        href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap"
-        rel="stylesheet">
-
-    <!-- Bootstrap CSS -->
+    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
-    <!-- Font Awesome -->
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
-    <!-- Custom CSS -->
-    <link rel="stylesheet" type="text/css" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
+    <link rel="stylesheet" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
 
     <!-- Mobile Optimizations -->
     <style>
@@ -408,10 +400,10 @@
                         </div>
 
                         <p class="hero-description">
-                            Results-driven Senior Data Engineer with proven expertise in ETL/ELT frameworks,
-                            data integration, and analytics across cloud and on-premises platforms.
-                            Specialized in Azure, Databricks, Synapse, and Apache Spark with strong proficiency
-                            in SQL, PySpark, and Python.
+                            I'm Parth Patel, a Senior Data Engineer transforming data into intelligence for enterprises.
+                            Results-driven expertise in ETL/ELT frameworks, data integration, and analytics across cloud
+                            and on-premises platforms. Specialized in Azure, Databricks, Synapse, and Apache Spark with
+                            strong proficiency in SQL, PySpark, and Python.
                         </p>
 
                         <div class="hero-stats">
@@ -485,7 +477,7 @@
                 <!-- TD Bank -->
                 <div class="col-lg-4 col-md-6">
                     <div class="experience-card animate-fade-in-up">
-                        <h5 class="card-title">IT Data Specialist (Senior Data Engineer)</h5>
+                        <h3 class="card-title">IT Data Specialist (Senior Data Engineer)</h3>
                         <h6 class="card-subtitle">TD Bank</h6>
                         <ul class="experience-list">
                             <li>Designed and implemented a comprehensive metadata-driven Azure Data Integration
@@ -510,7 +502,7 @@
                 <!-- Next Pathway -->
                 <div class="col-lg-4 col-md-6">
                     <div class="experience-card animate-fade-in-up" style="animation-delay: 0.2s;">
-                        <h5 class="card-title">Software Developer (Data Engineer)</h5>
+                        <h3 class="card-title">Software Developer (Data Engineer)</h3>
                         <h6 class="card-subtitle">Next Pathway Inc.</h6>
                         <ul class="experience-list">
                             <li>Delivered critical cloud migration and ETL modernization projects as part of the
@@ -533,7 +525,7 @@
                 <!-- Earthbound AI -->
                 <div class="col-lg-4 col-md-6">
                     <div class="experience-card animate-fade-in-up" style="animation-delay: 0.4s;">
-                        <h5 class="card-title">Data Platform & API Developer</h5>
+                        <h3 class="card-title">Data Platform & API Developer</h3>
                         <h6 class="card-subtitle">Earthbound AI</h6>
                         <ul class="experience-list">
                             <li>Built a high-performance geospatial imagery API using Fast API, PostGIS, and
@@ -577,7 +569,7 @@
                         <div class="certification-icon">
                             <i class="fab fa-microsoft"></i>
                         </div>
-                        <h5 class="card-title">Azure Data Engineer Associate</h5>
+                        <h3 class="card-title">Azure Data Engineer Associate</h3>
                         <p class="card-text">Microsoft Certified: Azure Data Engineer Associate - Expertise in designing
                             and implementing data solutions on Microsoft Azure</p>
                         <div class="d-flex justify-content-center">
@@ -592,7 +584,7 @@
                         <div class="certification-icon">
                             <i class="fab fa-google"></i>
                         </div>
-                        <h5 class="card-title">Professional Data Engineer</h5>
+                        <h3 class="card-title">Professional Data Engineer</h3>
                         <p class="card-text">Google Cloud Professional Data Engineer - Specialized in designing,
                             building, and operationalizing data processing systems</p>
                         <div class="d-flex justify-content-center">
@@ -623,7 +615,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-code"></i>
                         </div>
-                        <h5 class="card-title">Programming Languages</h5>
+                        <h3 class="card-title">Programming Languages</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Python</span>
                             <span class="skill-tag">Java</span>
@@ -639,7 +631,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-cloud"></i>
                         </div>
-                        <h5 class="card-title">Cloud Platforms</h5>
+                        <h3 class="card-title">Cloud Platforms</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Azure Synapse</span>
                             <span class="skill-tag">Azure Databricks</span>
@@ -656,7 +648,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-database"></i>
                         </div>
-                        <h5 class="card-title">Big Data & Analytics</h5>
+                        <h3 class="card-title">Big Data & Analytics</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Apache Spark</span>
                             <span class="skill-tag">PySpark</span>
@@ -673,7 +665,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-exchange-alt"></i>
                         </div>
-                        <h5 class="card-title">ETL/ELT Tools</h5>
+                        <h3 class="card-title">ETL/ELT Tools</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Azure Data Factory</span>
                             <span class="skill-tag">Talend</span>
@@ -689,7 +681,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-stream"></i>
                         </div>
-                        <h5 class="card-title">Streaming & Orchestration</h5>
+                        <h3 class="card-title">Streaming & Orchestration</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Apache Kafka</span>
                             <span class="skill-tag">Apache Airflow</span>
@@ -705,7 +697,7 @@
                         <div class="skill-icon">
                             <i class="fas fa-cogs"></i>
                         </div>
-                        <h5 class="card-title">DevOps & Infrastructure</h5>
+                        <h3 class="card-title">DevOps & Infrastructure</h3>
                         <div class="skill-tags">
                             <span class="skill-tag">Docker</span>
                             <span class="skill-tag">Kubernetes</span>
@@ -858,7 +850,7 @@
                             {% endif %}
                         </div>
                         <div class="blog-content">
-                            <h5 class="blog-title">{{ post.Title }}</h5>
+                            <h3 class="blog-title">{{ post.Title }}</h3>
                             <p class="blog-excerpt">{{ post.ShortContent }}</p>
                             <a href="{{ post.Url }}" target="_blank" rel="noopener" class="btn btn-modern-outline">
                                 <span>Read on Medium</span>
