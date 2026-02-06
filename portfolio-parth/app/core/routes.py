@@ -23,6 +23,10 @@ def core_home2():
 def community_redirect():
     return redirect(url_for('core.core_home'), code=302)
 
+@core_bp.route('/favicon.ico')
+def favicon():
+    return redirect(url_for('core.static', filename='core/images/parth.png'), code=302)
+
 @core_bp.route('/consultation', methods=['POST'])
 def consultation_submit():
     name = (request.form.get('name') or '').strip()
