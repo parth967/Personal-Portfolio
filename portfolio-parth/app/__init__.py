@@ -14,11 +14,4 @@ def create_app():
     app.config['JWT_SECRET_KEY'] = os.getenv('JWT_SECRET_KEY', 'dev-secret-key')
     app.register_blueprint(core_bp)
 
-    @app.before_request
-    def redirect_www_to_non_www():
-        if request.host.startswith('www.'):
-            new_host = request.host[4:]
-            url = request.url.replace(request.host, new_host, 1)
-            return redirect(url, code=301)
-
     return app
