@@ -43,8 +43,11 @@ def consultation_submit():
             from email.mime.text import MIMEText
             msg = MIMEText(body)
             msg['Subject'] = f"Portfolio consultation: {topic or 'General'}"
-            msg['From'] = os.getenv('SMTP_FROM', email)
+            # From must be your SMTP account (e.g. Gmail) so it delivers; Reply-To = submitter so you can reply
+            from_email = os.getenv('SMTP_FROM') or os.getenv('SMTP_USER') or to_email
+            msg['From'] = from_email
             msg['To'] = to_email
+            msg['Reply-To'] = email
             with smtplib.SMTP(os.getenv('SMTP_HOST'), int(os.getenv('SMTP_PORT', 587))) as s:
                 if os.getenv('SMTP_USE_TLS', '1') == '1':
                     s.starttls()

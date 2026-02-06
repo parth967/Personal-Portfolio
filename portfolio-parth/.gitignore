@@ -1,0 +1,5 @@
+.env
+consultation_requests.log
+__pycache__/
+*.pyc
+venv/

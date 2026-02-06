@@ -1439,10 +1439,21 @@ body {
     flex-wrap: wrap;
 }
 
-.contact-email-text {
-    color: var(--text-secondary);
-    font-size: 1rem;
+.contact-email-text,
+.contact-email-link {
+    color: var(--text-accent);
+    font-size: 1.05rem;
+    font-weight: 500;
     word-break: break-all;
+}
+
+.contact-email-link {
+    text-decoration: none;
+}
+
+.contact-email-link:hover {
+    color: var(--text-primary);
+    text-decoration: underline;
 }
 
 @media (max-width: 576px) {
