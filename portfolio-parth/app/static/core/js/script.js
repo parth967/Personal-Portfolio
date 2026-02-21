@@ -107,7 +107,7 @@ function initSkillBars() {
     skillBars.forEach(bar => observer.observe(bar));
 }
 
-// Counter animation for stats
+// Counter animation for stats (preserves server-rendered years experience and animates others)
 function initCounterAnimation() {
     const counters = document.querySelectorAll('.stat-number');
     
@@ -115,26 +115,28 @@ function initCounterAnimation() {
         entries.forEach(entry => {
             if (entry.isIntersecting) {
                 const counter = entry.target;
-                const target = parseInt(counter.textContent.replace(/\D/g, ''));
-                const suffix = counter.textContent.replace(/\d/g, '');
+                const raw = counter.textContent.trim();
+                const target = parseInt(raw.replace(/\D/g, ''), 10);
+                const suffix = raw.replace(/\d/g, '') || '';
+                if (isNaN(target) || target <= 0) return;
                 let current = 0;
-                const increment = target / 50;
+                const increment = Math.max(1, target / 40);
                 
                 const updateCounter = () => {
                     if (current < target) {
-                        current += increment;
-                        counter.textContent = Math.ceil(current) + suffix;
+                        current = Math.min(current + increment, target);
+                        counter.textContent = Math.round(current) + suffix;
                         requestAnimationFrame(updateCounter);
                     } else {
                         counter.textContent = target + suffix;
+                        observer.unobserve(counter);
                     }
                 };
                 
                 updateCounter();
-                observer.unobserve(counter);
             }
         });
-    });
+    }, { threshold: 0.2 });
     
     counters.forEach(counter => observer.observe(counter));
 }

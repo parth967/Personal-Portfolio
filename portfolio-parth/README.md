@@ -1,6 +1,6 @@
 # Parth Patel - Senior Data Engineer Portfolio
 
-A professional portfolio website showcasing my experience as a Senior Data Engineer with expertise in Azure, Databricks, PySpark, and modern data engineering practices.
+A professional portfolio website showcasing my experience as a Senior Data Engineer (6+ years, auto-updating) with expertise in Azure, Databricks, PySpark, and modern data engineering practices.
 
 ## Features
 

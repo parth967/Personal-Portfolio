@@ -17,47 +17,65 @@
     <link rel="apple-touch-icon" href="{{ url_for('core.static', filename='core/images/favicon.svg') }}" type="image/svg+xml" sizes="180x180">
 
     <!-- SEO Meta Tags -->
-    <title>Parth Patel | Senior Data Engineer | Azure, Databricks, PySpark | Toronto</title>
+    <title>Parth Patel | Senior Data Engineer & Consultant | Azure, Databricks, PySpark | Toronto, Canada</title>
     <meta name="description"
-        content="Parth Patel is a Senior Data Engineer in Toronto specializing in Azure, Databricks, and PySpark. Certified Azure & Google Cloud. Available for hire—book a free consultation.">
+        content="Parth Patel — {{ years_experience | default(6) }}+ years Senior Data Engineer in Toronto. Azure & Google Cloud certified. ETL, Databricks, data pipelines & architecture. Free consultation for data projects and hiring.">
     <meta name="keywords"
-        content="data engineer, senior data engineer, azure data engineer, databricks expert, pyspark developer, ETL pipelines, data integration, big data, cloud data engineer, toronto data engineer, canada data engineer, azure certified, google cloud certified, data platform developer, streaming data, delta lake, synapse analytics, data warehouse, data lake, real-time analytics, spark developer, python data engineer, sql expert, data governance, data quality, metadata management, machine learning engineer, AI engineer, data scientist">
+        content="data engineer, senior data engineer, data consultant, azure data engineer, databricks expert, pyspark developer, ETL pipelines, data integration, big data, cloud data engineer, toronto data engineer, canada data engineer, data consultant toronto, azure certified, google cloud certified, data platform developer, streaming data, delta lake, synapse analytics, data warehouse, data lake, real-time analytics, spark developer, python data engineer, sql expert, data governance, data quality, metadata management, hire data engineer, data engineering consultant">
     <meta name="author" content="Parth Patel">
     <meta name="robots" content="index, follow, max-snippet:-1, max-image-preview:large, max-video-preview:-1">
     <meta name="language" content="English">
     <meta name="geo.region" content="CA-ON">
-    <meta name="geo.placename" content="Toronto">
+    <meta name="geo.placename" content="Toronto, Ontario, Canada">
     <meta name="geo.position" content="43.6532;-79.3832">
     <meta name="ICBM" content="43.6532, -79.3832">
+    <meta name="geo.country" content="Canada">
+    <meta name="distribution" content="global">
+    <meta name="revisit-after" content="7 days">
+    <meta name="rating" content="general">
 
     <!-- Additional SEO Tags -->
-    <meta name="theme-color" content="#0f172a">
-    <meta name="msapplication-TileColor" content="#0f172a">
+    <meta name="theme-color" content="#0b0d12">
+    <meta name="msapplication-TileColor" content="#0b0d12">
     <meta name="apple-mobile-web-app-capable" content="yes">
     <meta name="apple-mobile-web-app-status-bar-style" content="black-translucent">
 
     <!-- Open Graph Meta Tags -->
-    <meta property="og:title" content="Parth Patel - Senior Data Engineer | Azure Databricks Expert">
+    <meta property="og:title" content="Parth Patel — Senior Data Engineer & Consultant | Toronto">
     <meta property="og:description"
-        content="Experienced Senior Data Engineer specializing in Azure, Databricks, PySpark. Certified professional with expertise in ETL pipelines, data integration, and cloud data platforms.">
+        content="{{ years_experience | default(6) }}+ years building scalable data solutions. Azure & Google Cloud certified. ETL, Databricks, PySpark. Free consultation.">
     <meta property="og:type" content="profile">
-    <meta property="og:url" content="https://yourportfolio.com">
-    <meta property="og:image" content="{{ url_for('core.static', filename='core/images/parth.png') }}">
-    <meta property="og:site_name" content="Parth Patel - Data Engineer Portfolio">
+    <meta property="og:url" content="{{ base_url }}/">
+    <meta property="og:image" content="{{ base_url }}{{ url_for('core.static', filename='core/images/parth.jpg') }}">
+    <meta property="og:site_name" content="Parth Patel — Data Engineer Portfolio">
     <meta property="og:locale" content="en_CA">
+    <meta property="og:locale:alternate" content="en_US">
 
     <!-- Twitter Card Meta Tags -->
     <meta name="twitter:card" content="summary_large_image">
-    <meta name="twitter:title" content="Parth Patel - Senior Data Engineer | Azure Databricks Expert">
+    <meta name="twitter:title" content="Parth Patel — Senior Data Engineer & Consultant | Toronto">
     <meta name="twitter:description"
-        content="Senior Data Engineer with expertise in Azure, Databricks, PySpark, ETL pipelines. Certified Azure & Google Cloud Professional.">
-    <meta name="twitter:image" content="{{ url_for('core.static', filename='core/images/parth.png') }}">
+        content="{{ years_experience | default(6) }}+ years in data engineering. Azure & Google Cloud certified. ETL, Databricks, data pipelines. Free consultation.">
+    <meta name="twitter:image" content="{{ base_url }}{{ url_for('core.static', filename='core/images/parth.jpg') }}">
 
     <!-- LinkedIn Meta Tags -->
     <meta property="article:author" content="https://www.linkedin.com/in/parth-patel-72a92611a/">
 
     <!-- Canonical and self-referencing alternate -->
     <link rel="canonical" href="{{ base_url }}/">
+
+    <!-- WebSite schema — helps search engines discover and index -->
+    <script type="application/ld+json">
+    {
+        "@context": "https://schema.org",
+        "@type": "WebSite",
+        "name": "Parth Patel — Data Engineer Portfolio",
+        "url": "{{ base_url }}/",
+        "description": "Senior Data Engineer & Consultant in Toronto. Azure, Databricks, PySpark. Free consultation.",
+        "publisher": { "@type": "Person", "name": "Parth Patel" },
+        "inLanguage": "en-CA"
+    }
+    </script>
 
     <!-- Structured Data for SEO -->
     <script type="application/ld+json">
@@ -66,9 +84,9 @@
         "@type": "Person",
         "name": "Parth Patel",
         "jobTitle": "Senior Data Engineer",
-        "description": "Senior Data Engineer specializing in Azure, Databricks, PySpark, ETL pipelines, and cloud data platforms",
-        "url": "https://yourportfolio.com",
-        "image": "{{ url_for('core.static', filename='core/images/parth.jpg') }}",
+        "description": "Senior Data Engineer and consultant with {{ years_experience | default(6) }}+ years building scalable data solutions. Azure & Google Cloud certified. Toronto-based, serving Canada and remote clients.",
+        "url": "{{ base_url }}/",
+        "image": "{{ base_url }}{{ url_for('core.static', filename='core/images/parth.jpg') }}",
         "email": "pparth967@gmail.com",
         "telephone": "+1-519-778-5965",
         "address": {
@@ -184,7 +202,7 @@
                 "name": "What is Parth Patel's experience as a Data Engineer?",
                 "acceptedAnswer": {
                     "@type": "Answer",
-                    "text": "Parth Patel is a Senior Data Engineer with 5+ years of experience specializing in Azure, Databricks, PySpark, and ETL pipelines. He has worked at TD Bank, Next Pathway, and Earthbound AI, building scalable data solutions and processing millions of transactions daily."
+                    "text": "Parth Patel is a Senior Data Engineer with {{ years_experience | default(6) }}+ years of experience specializing in Azure, Databricks, PySpark, and ETL pipelines. He has worked at TD Bank, Next Pathway, and Earthbound AI, building scalable data solutions and processing millions of transactions daily."
                 }
             },
             {
@@ -210,6 +228,22 @@
                     "@type": "Answer",
                     "text": "Yes, Parth Patel is available for full-time, contract, and consulting opportunities. He is based in Toronto, Canada and open to remote, hybrid, and on-site work arrangements."
                 }
+            },
+            {
+                "@type": "Question",
+                "name": "Why hire a data engineering consultant in Toronto?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "A Toronto-based data consultant like Parth Patel brings local timezone alignment, Azure and cloud expertise, and proven delivery at TD Bank and enterprise scale. Free consultation available to scope your data pipeline, migration, or analytics needs."
+                }
+            },
+            {
+                "@type": "Question",
+                "name": "What value does a Senior Data Engineer add?",
+                "acceptedAnswer": {
+                    "@type": "Answer",
+                    "text": "Senior Data Engineers deliver scalable ETL/ELT pipelines, lower cloud costs through optimization, real-time streaming solutions, data governance and quality frameworks, and architecture that supports analytics and ML—reducing risk and time-to-value for data projects."
+                }
             }
         ]
     }
@@ -218,7 +252,7 @@
     <!-- Combined: fonts + Bootstrap + Font Awesome + custom (single combined request not possible without build; we keep 2 external + 1 local to reduce files) -->
     <link rel="preconnect" href="https://fonts.googleapis.com">
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-    <link href="https://fonts.googleapis.com/css2?family=Inter:wght@300;400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600&display=swap" rel="stylesheet">
+    <link href="https://fonts.googleapis.com/css2?family=Outfit:wght@300;400;500;600;700;800&family=DM+Sans:ital,wght@0,400;0,500;0,600;0,700;1,400&family=JetBrains+Mono:wght@400;500&display=swap" rel="stylesheet">
     <link href="https://cdn.jsdelivr.net/npm/bootstrap@5.3.2/dist/css/bootstrap.min.css" rel="stylesheet">
     <link href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.0/css/all.min.css" rel="stylesheet">
     <link rel="stylesheet" href="{{ url_for('core.static', filename='core/css/styles.css') }}">
@@ -270,7 +304,7 @@
 
             /* Better tap highlighting */
             * {
-                -webkit-tap-highlight-color: rgba(0, 212, 170, 0.2);
+                -webkit-tap-highlight-color: rgba(212, 160, 19, 0.25);
             }
 
             /* Improve button touch feedback */
@@ -403,15 +437,12 @@
                         </div>
 
                         <p class="hero-description">
-                            I'm Parth Patel, a Senior Data Engineer transforming data into intelligence for enterprises.
-                            Results-driven expertise in ETL/ELT frameworks, data integration, and analytics across cloud
-                            and on-premises platforms. Specialized in Azure, Databricks, Synapse, and Apache Spark with
-                            strong proficiency in SQL, PySpark, and Python.
+                            I help organizations turn raw data into reliable, scalable intelligence. With {{ years_experience | default(6) }}+ years building pipelines at TD Bank, Next Pathway, and Earthbound AI, I deliver lower cloud costs, faster insights, and production-grade data platforms—Azure, Databricks, PySpark, and modern ETL/ELT. Based in Toronto; available for remote and on-site engagements.
                         </p>
 
                         <div class="hero-stats">
                             <div class="stat-item">
-                                <span class="stat-number">5+</span>
+                                <span class="stat-number" id="hero-years-experience">{{ years_experience | default(6) }}+</span>
                                 <span class="stat-label">Years Experience</span>
                             </div>
                             <div class="stat-item">
@@ -473,8 +504,7 @@
                     Professional Journey
                 </span>
                 <h2 class="section-title">Senior Data Engineer Experience</h2>
-                <p class="section-subtitle">Building scalable data solutions across Azure, Databricks, and cloud
-                    platforms</p>
+                <p class="section-subtitle">Enterprise-grade data pipelines, real-time streaming, and cloud architecture that reduce cost and accelerate time-to-value</p>
             </div>
             <div class="row g-4">
                 <!-- TD Bank -->
@@ -563,7 +593,7 @@
                     Professional Certifications
                 </span>
                 <h2 class="section-title">Industry-Recognized Expertise</h2>
-                <p class="section-subtitle">Certified in leading cloud platforms and data engineering technologies</p>
+                <p class="section-subtitle">Microsoft Azure Data Engineer Associate & Google Cloud Professional Data Engineer—validated expertise for your data initiatives</p>
             </div>
 
             <div class="row justify-content-center g-4">
@@ -608,8 +638,7 @@
                     Technical Expertise
                 </span>
                 <h2 class="section-title">Data Engineering Skills</h2>
-                <p class="section-subtitle">Comprehensive expertise across modern data engineering technologies and
-                    platforms</p>
+                <p class="section-subtitle">End-to-end stack: languages, cloud platforms, big data, ETL/ELT, streaming, and DevOps—ready for your next data project</p>
             </div>
 
             <div class="row g-4">
@@ -732,8 +761,8 @@
             <div class="row justify-content-center">
                 <div class="col-lg-8">
                     <div class="contact-card animate-fade-in-up">
-                        <p class="lead mb-4" style="color: var(--text-secondary); font-size: 1.1rem;">
-                            I'm always interested in discussing new opportunities, challenging data engineering projects, or collaborating on innovative solutions that drive business value through data.
+                        <p class="lead mb-4 contact-lead">
+                            Whether you need a data consultant for a migration, a new hire for your team, or a technical partner for Azure and Databricks—I bring {{ years_experience | default(6) }}+ years of hands-on delivery and certified cloud expertise. Let's discuss your goals.
                         </p>
 
                         <div class="contact-info">
@@ -842,9 +871,9 @@
                     <article class="blog-card animate-fade-in-up">
                         <div class="blog-image">
                             {% if post.Image and post.Image.startswith('http') and 'miro.medium.com' in post.Image %}
-                            <img src="{{ post.Image }}" alt="{{ post.Title }}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'blog-image-placeholder\\' style=\\'background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);\\'><div class=\\'blog-placeholder-content\\'><i class=\\'fas fa-blog\\'></i><span>Data Engineering</span></div></div>';">
+                            <img src="{{ post.Image }}" alt="{{ post.Title }}" loading="lazy" onerror="this.onerror=null; this.parentElement.innerHTML='<div class=\\'blog-image-placeholder\\' style=\\'background: linear-gradient(135deg, #1a1e28 0%, #252a36 50%, rgba(212,160,19,0.25) 100%);\\'><div class=\\'blog-placeholder-content\\'><i class=\\'fas fa-blog\\'></i><span>Data Engineering</span></div></div>';">
                             {% else %}
-                            <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #667eea 0%, #764ba2 50%, #f093fb 100%);">
+                            <div class="blog-image-placeholder" style="background: linear-gradient(135deg, #1a1e28 0%, #252a36 50%, rgba(212,160,19,0.25) 100%);">
                                 <div class="blog-placeholder-content">
                                     <i class="fas fa-blog"></i>
                                     <span>Data Engineering</span>
@@ -880,7 +909,7 @@
         <div class="container">
             <div class="row align-items-center">
                 <div class="col-md-6">
-                    <p>&copy; 2024 Parth Patel. All rights reserved.</p>
+                    <p>&copy; <span id="footer-year">2025</span> Parth Patel. All rights reserved.</p>
                 </div>
                 <div class="col-md-6 text-md-end">
                     <div class="d-flex justify-content-md-end justify-content-center gap-3">
@@ -1041,6 +1070,10 @@
 
             // Initial call
             handleScroll();
+
+            // Dynamic footer year
+            var footerYear = document.getElementById('footer-year');
+            if (footerYear) footerYear.textContent = new Date().getFullYear();
 
             // Mobile menu close on link click
             const navbarCollapse = document.querySelector('.navbar-collapse');
